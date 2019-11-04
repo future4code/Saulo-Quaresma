@@ -1,0 +1,23 @@
+Comandos:
+
+Desafio parte 2= Acelerando
+git commit
+git checkout C4
+git checkout master^
+git checkout master~^
+git reset HEAD~1
+git revert HEAD
+
+
+Desafio parte 3= Push & Pull
+git clone
+git checkout
+git commit
+git fetch
+git pull
+git merge
+git fakeTeamwork
+git push
+git pull --rebase
+
+Desafio parte 4= Até a origin e além -- repositórios remotos avançados!
