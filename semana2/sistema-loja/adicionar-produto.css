@@ -1,0 +1,108 @@
+* {                   /* reseta toda configuração prévia de style da página e deixa ela pronta pra ser estilizada */
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Roboto', sans-serif;
+  width: auto;
+  height: auto;
+}
+
+body{                  /* adiciona uma cor de fundo para página toda */ 
+  background-color: #EAFFE9;
+}
+
+header {                /* estiliza o nome da página */ 
+  color: #67AB9F;
+  border: 1px solid #3C635D;
+  text-align: center;
+  padding: 20px 0;
+  margin: 15px;
+  text-shadow: 1px 1px 1px black;
+}
+
+#texto-informe {            /* estiliza o texto de informe sobre o que se trata a página */ 
+  text-align: center;
+  font-size: 12pt;
+  font-style: italic;
+  margin: 30px;
+  border: 1px solid #3C635D;
+  padding: 15px;
+}
+
+form{              /* adiciona uma espaço para impedir o formulário de ficar grudado na esquerda */
+  padding-left: 35px;
+}
+
+.c-produto {                    /* estiliza o nome do campo */
+  background-color: #3C635D;
+  color: white;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.c-descrição {                 /* estiliza o nome do campo */
+  background-color: #3C635D;
+  color: white;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.c-preço {                  /* estiliza o nome do campo */
+  background-color: #3C635D;
+  color: white;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.c-quantidade {               /* estiliza o nome do campo */
+  background-color: #3C635D;
+  color: white;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+input {               /* adiciona uma margem acima para criar espaço entre o nome do campo e o input */
+  margin-top: 15px;
+}
+
+#botoes-links{              /* alinha e coloca margem nos links da página funcionários */ 
+  text-align: center;
+  margin: 50px; 
+}
+
+.b-home {                /* estiliza o link para a página inicial do sistema loja */ 
+  background-color: #67AB9F;
+  color: white;
+  border: 1px solid #3C635D;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 5px 15px;  
+}
+
+.b-estoque {              /* estiliza o link para a página controle de estoque */ 
+  background-color: #67AB9F;
+  color: white;
+  border: 1px solid #3C635D;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 5px 15px;
+}
+
+.b-funcionarios {             /* estiliza o link para a página funcionários */ 
+  background-color: #67AB9F;
+  color: white;
+  border: 1px solid #3C635D;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 5px 15px;
+}
+
+footer {            /* estiliza o footer em geral */
+  text-align: center;
+  margin: 30px;
+  border: 1px solid #3C635D;
+  padding: 15px;
+}
+
+footer > p {         /* alinha o texto no footer */ 
+  text-align: center;  
+}

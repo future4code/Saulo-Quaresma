@@ -4,26 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="funcionarios.css">
     <title>Funcionários</title>
   </head>
 
   <body>
-    <h3>Mercadinho Quero-o-seu-Dinheiro - Funcionários</h3>
+    <header>        <!-- título da página -->
+      <h3>Mercadinho<br>Quero-o-seu-Dinheiro - Funcionários</h3>
+    </header>
 
-    <p>Lista com nossos funcionários:</p>
+    <p id="texto-informe">Lista com nossos funcionários:</p>         <!-- texto sobre a página -->
 
-    <ol>
-      <li><b>Juliana Sampaio</b><br>Data de Nascimento: 03/04/1979</li><br>
-      <li><b>Diogo Oliveira</b><br>Data de Nascimento: 17/08/1992</li><br>
-      <li><b>Laís Vieira</b><br>Data de Nascimento: 10/11/1997</li><br>
-      <li><b>José Paulo Sousa </b><br>Data de Nascimento: 25/06/1956</li><br>
-      <li><b>Michele Barbosa</b><br>Data de Nascimento: 18/01/1984</li>
-    </ol>
-
-    <div>
-      <a href="pagina-inicial.html">Home</a>
-      <a href="controle-estoque.html">Controle de Estoque</a>
-      <a href="adicionar-produto.html">Adicionar Produto</a>
+    <div id="lista-funcionarios">       <!-- adiciona lista dos funcionários em ordem númerica -->
+      <ol>
+        <li><u><b>Juliana Sampaio</b></u><br>Data de Nascimento: 03/04/1979</li><br>
+        <li><u><b>Diogo Oliveira</b></u><br>Data de Nascimento: 17/08/1992</li><br>
+        <li><u><b>Laís Vieira</b></u><br>Data de Nascimento: 10/11/1997</li><br>
+        <li><u><b>José Paulo Sousa </b></u><br>Data de Nascimento: 25/06/1956</li><br>
+        <li><u><b>Michele Barbosa</b></u><br>Data de Nascimento: 18/01/1984</li>
+      </ol>
     </div>
+
+    <div id="botoes-links">         <!-- adiciona os links para as outras páginas -->
+      <a class="b-home" href="pagina-inicial.html">Home</a>
+      <a class="b-estoque" href="contrle-estoque.html">Controle de Estoque</a>
+      <a class="b-adicionar" href="adicionar-produto.html">Adicionar Produtos</a>          
+    </div>
+
+    <footer>        <!-- informe adicionais no rodapé do site -->
+        <p>Postado por: Saulo Quaresma</p>
+        <p>Informação de Contato: <a href="mailto:sauloquaresma@gmail.com">sauloquaresma@gmail.com</a>.</p>
+    </footer>
   </body>
 </html>

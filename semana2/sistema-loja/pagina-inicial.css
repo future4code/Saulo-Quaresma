@@ -1,0 +1,80 @@
+* {                     /* reseta toda configuração prévia de style da página e deixa ela pronta pra ser estilizada */
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Roboto', sans-serif;
+  width: auto;
+  height: auto;
+  background-color: #EAFFE9;
+}
+
+header {              /* estiliza o nome da página */
+  color: #67AB9F;
+  border: 1px solid #3C635D;
+  text-align: center;
+  padding: 20px 0;
+  margin: 15px;
+  text-shadow: 1px 1px 1px black;
+}
+
+#texto-bem-vindos {                    /* estiliza o texto de de boas-vindas página da loja */ 
+  text-align: center;
+  font-size: 11pt;
+  font-style: italic;
+  margin: 30px;
+  border: 1px solid #3C635D;
+  padding: 15px;
+}
+
+h3, footer {              /* estiliza o menu e o footer em geral */
+  text-align: center;
+  margin: 30px;
+  border: 1px solid #3C635D;
+  padding: 15px;
+}
+
+h3 {            /* estiliza um pouco mais somente o menu */
+  color: #67AB9F;
+  padding: 20px 0;
+  margin: 15px;
+  text-shadow: 1px 1px 1px black;
+}
+
+#botoes-links {         /* alinha e coloca margem nos links da página funcionários */ 
+  text-align: center;
+  margin: 50px; 
+}
+
+.b-estoque {              /* estiliza o link para a página controle de estoque */
+  background-color: #67AB9F;
+  color: white;
+  font-size: 11pt;
+  border: 1px solid #3C635D;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 5px 15px;
+}
+
+.b-adicionar {              /* estiliza o link para a página adicionar produtos */
+  background-color: #67AB9F;
+  color: white;
+  font-size: 11pt;
+  border: 1px solid #3C635D;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 5px 15px;
+}
+
+.b-funcionarios {       /* estiliza o link para a página funcionários */
+  background-color: #67AB9F;
+  color: white;
+  font-size: 11pt;
+  border: 1px solid #3C635D;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 5px 15px;
+}
+
+footer > p {            /* alinha o texto no footer */ 
+  font-size: 11pt;
+  text-align: center;  
+}
