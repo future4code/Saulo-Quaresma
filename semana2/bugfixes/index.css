@@ -27,7 +27,8 @@ button:focus {
 }
 
 img {
-    width: 100px;
+    width: 50px;            /* diminiu o tamanho da imagem */
+    height: 50px;           /* deixa todas com o mesmo tamanho */
 }
 
 div>p:first-child {
