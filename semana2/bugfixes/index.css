@@ -31,7 +31,7 @@ img {
 }
 
 div>p:first-child {
-    display: inline;
+    padding-top: 100px;    /* Colocado espaçamento entre o texto e o cabeçalho. Removido o display: inline */
 }
 
 div img {
