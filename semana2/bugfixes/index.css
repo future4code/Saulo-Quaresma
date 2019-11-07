@@ -60,7 +60,7 @@ div img {
 }
 
 .container {
-    height: 500px;
+    height: 500px;    
     text-align: center;
 }
 
@@ -81,7 +81,7 @@ div img {
 }
 
 #container-de-descricao>ol {
-    padding: 15px 0px;
+    padding: 15px 45%;          /* posiciona a lista junto com os números ao centro da tela */
 }
 
 #container-para-comprar {
