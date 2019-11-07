@@ -30,6 +30,7 @@ input {
 button:focus {
     color: white;
     outline: none;                  /* retira o contorno azul quando clica nos botões */
+    border: none;
 }
 
 img {
@@ -52,9 +53,9 @@ div img {
     border-radius: 5px;
     font-size: 20px;
     color: white;
-    position: absolute;         /* Corrigido o posicionamento do botão Comprar na Tela Home */
-    bottom: 15%;
-    left: 45%;
+    position: relative;         /* Corrigido o posicionamento do botão Comprar na Tela Home */
+    bottom: 18%;
+    border: none;
 }
 
 .botao-amarelo:hover {
@@ -67,6 +68,7 @@ div img {
 }
 
 .icone {
+    width: 15px;
     height: 15px;
 }
 
@@ -80,6 +82,7 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    font-size: 14pt;
 }
 
 #container-de-descricao>ol {
@@ -120,6 +123,8 @@ td button {
     height: 30px;
     border-radius: 5px;
     color: black;
+    font-weight: bold;
+    border: none;
 }
 
 td button:hover {
@@ -132,11 +137,11 @@ td button:hover {
 }
 
 .container-do-search img:hover {
-    opacity: 30%;
+    opacity: 30%;           /* deixa a lupa mais claro ao passar o mouse */
 }
 
 .container-do-search img:active {
-    opacity: 100%;
+    opacity: 100%;              /* deixa a lupa de novo preta ao clicar com o mouse */
 }
 
 #back-button {
@@ -147,6 +152,9 @@ td button:hover {
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    position: absolute;         /* Corrigido o posicionamento do botão voltar na Tela Comprar */
+    bottom: 25%;                /* corrige posicionamento em relação ao fundo */
+    right: 50%;                 /* corrige posicionamento em relação à direita */
 }
 
 #back-button:hover {
