@@ -4,47 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="controle-estoque.css">
     <title>Controle de Estoque</title>
   </head>
 
   <body>
-    <h3>Controle de Estoque</h3>
-    <h4>Tabela de produtos:</h4>
+    <header>              <!-- título da página -->
+      <h3>Controle de Estoque</h3>
+    </header>
+    
+    <h4>Tabela de produtos:</h4>        <!-- sub-título da página -->
 
-    <table>
-      <tr>
-        <th>
-          <td><b>Produto</b></td>
-          <td><b>Descrição</b></td>
-          <td><b>Preço</b></td>
-          <td><b>Quantidade Disponível</b></td>
-        </th>
+    <table>           <!-- adiciona uma tabela -->
+      <tr>            <!-- adiciona os campos da tabela -->
+        <th><b>Produtos</b></th>
+        <th><b>Descrição</b></th>
+        <th><b>Preço</b></th>
+        <th><b>Quantidade Disponível</b></th>
       </tr>
-      <tr>
-        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYOc4B4zsGXbsBLoIwaBrQfmxEuRHGN3V4Mcpn7r6_SAgvZQ9W&s" alt="farinha de trigo"></td>
+      <tr>        <!-- adiciona o primeiro produto -->
+        <td class="tira-imagem-coluna"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYOc4B4zsGXbsBLoIwaBrQfmxEuRHGN3V4Mcpn7r6_SAgvZQ9W&s" alt="farinha de trigo"></td>
         <td>Pacote de farinha de trigo<br>1 kg</td>
-        <td>R$ 4,80</td>
+        <td>R$4,80</td>
         <td>50</td>
       </tr>
-      <tr>
-        <td><img src="http://clipart.coolclips.com/480/vectors/tf05165/CoolClips_vc009979.png" alt="caixa de ovo"></td>
+      <tr>        <!-- adiciona o segundo produto -->
+        <td class="tira-imagem-coluna"><img src="http://clipart.coolclips.com/480/vectors/tf05165/CoolClips_vc009979.png" alt="caixa de ovo"></td>
         <td>Caixa com ovos brancos 12 unidades</td>
-        <td>R$ 3,50</td>
+        <td>R$3,50</td>
         <td>25</td>
       </tr>
-      <tr>
-          <td><img src="https://static.vecteezy.com/system/resources/previews/000/365/621/non_2x/vector-isolated-box-of-milk.jpg" alt="caixinha de leite"></td>
+      <tr>          <!-- adiciona o terceiro produto -->
+          <td class="tira-imagem-coluna"><img src="https://static.vecteezy.com/system/resources/previews/000/365/621/non_2x/vector-isolated-box-of-milk.jpg" alt="caixinha de leite"></td>
           <td>Caixinha de leite 2L</td>
-          <td>R$ 4,89</td>
+          <td>R$4,89</td>
           <td>80</td>
         </tr>      
     </table>
 
-    <div>
-      <a href="pagina-inicial.html">Home</a>
-      <a href="adicionar-produto.html">Adicionar Produto</a>
-      <a href="funcionarios.html">Funcionários</a>
-    </div>
+    <div id="botoes-links">             <!-- adiciona os links para as outras páginas -->
+      <a class="b-home" href="pagina-inicial.html">Home</a>
+      <a class="b-adicionar" href="adicionar-produto.html">Adicionar Produto</a>
+      <a class="b-funcionarios" href="funcionarios.html">Funcionários</a>
+    </div>    
 
+    <footer>            <!-- informe adicionais no rodapé do site -->
+        <p>Postado por: Saulo Quaresma</p>
+        <p>Informação de Contato: <a href="mailto:sauloquaresma@gmail.com">sauloquaresma@gmail.com</a>.</p>
+    </footer>
   </body>
 </html>

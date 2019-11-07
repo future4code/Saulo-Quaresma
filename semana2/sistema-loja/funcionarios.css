@@ -1,0 +1,78 @@
+* {               /* reseta toda configuração prévia de style da página e deixa ela pronta pra ser estilizada */ 
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Roboto', sans-serif;
+  width: auto;
+  height: auto;
+}
+
+body{                     /* adiciona uma cor de fundo para página toda */ 
+  background-color: #EAFFE9;
+}
+
+header {                /* estiliza o nome da página */ 
+  color: #67AB9F;
+  border: 1px solid #3C635D;
+  text-align: center;
+  padding: 20px 0;
+  margin: 15px;
+  text-shadow: 1px 1px 1px black;
+}
+
+#texto-informe {            /* estiliza o texto de informe sobre o que se trata a página */ 
+  text-align: center;
+  font-size: 12pt;
+  font-style: italic;
+  margin: 30px;
+  border: 1px solid #3C635D;
+  padding: 15px;
+}
+
+#lista-funcionarios {           /* estiliza a lista de funcionários */ 
+  padding-left: 35px;
+  margin: 10px;
+  border: 1px solid #3C635D;
+}
+
+#botoes-links{        /* alinha e coloca margem nos links da página funcionários */ 
+  text-align: center;
+  margin: 50px; 
+}
+
+.b-home {           /* estiliza o link para a página inicial do sistema loja */ 
+  background-color: #67AB9F;
+  color: white;
+  border: 1px solid #3C635D;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 5px 15px;  
+}
+
+.b-estoque {          /* estiliza o link para a página de controle de estoque */ 
+  background-color: #67AB9F;
+  color: white;
+  border: 1px solid #3C635D;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 5px 15px;
+}
+
+.b-adicionar {        /* estiliza o link para a página adicionar produtos */ 
+  background-color: #67AB9F;
+  color: white;
+  border: 1px solid #3C635D;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 5px 15px;
+}
+
+footer {              /* estiliza o footer em geral */ 
+  text-align: center;
+  margin: 30px;
+  border: 1px solid #3C635D;
+  padding: 15px;
+}
+
+footer > p {          /* alinha o texto no footer */ 
+  text-align: center;  
+}
