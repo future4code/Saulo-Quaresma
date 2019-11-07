@@ -20,6 +20,10 @@ h2 {
 input {
     height: 20px;
     width: 500px;
+    border: 1.5px solid;        /* aumenta a borda que estava em 0.5 px */
+	border-top: none;           /* retira a borda de cima */
+	border-left: none;          /* retira a borda da esquerda */
+	border-right: none;         /* retira a borda da direita */
 }
 
 button:focus {
@@ -123,7 +127,7 @@ td button:hover {
 
 .container-do-search {
     margin-top: 20px;
-    height: 100px;
+    height: 100px;    
 }
 
 .container-do-search img:hover {
