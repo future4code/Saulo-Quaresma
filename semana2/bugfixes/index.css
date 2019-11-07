@@ -107,9 +107,8 @@ div:last-child {
 }
 
 table {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 60%;                 
+    margin: auto;                   /* arrumado o margin para centralizar a tabela em todos os sentidos, por a tabela ser block */
     text-align: center;             /* centralizando o texto dentro da tabela */
 }
 
