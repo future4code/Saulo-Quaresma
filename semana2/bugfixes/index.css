@@ -105,6 +105,7 @@ table {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;             /* centralizando o texto dentro da tabela */
 }
 
 td button {
