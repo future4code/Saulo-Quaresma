@@ -1,0 +1,162 @@
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    background-color: #fe7e02;
+    padding: 10px 5px 10px 5px;
+    color: white;
+    text-align: center;
+}
+
+input {
+    height: 20px;
+    width: 500px;
+    border: 1.5px solid;        /* aumenta a borda que estava em 0.5 px */
+	border-top: none;           /* retira a borda de cima */
+	border-left: none;          /* retira a borda da esquerda */
+    border-right: none;         /* retira a borda da direita */
+    outline: none;              /* retira o contorno azul quando clica no campo de texto */
+}
+
+button:focus {
+    color: white;
+    outline: none;                  /* retira o contorno azul quando clica nos botões */
+    border: none;
+}
+
+img {
+    width: 50px;            /* diminiu o tamanho da imagem */
+    height: 50px;           /* deixa todas com o mesmo tamanho */
+}
+
+div>p:first-child {
+    padding-top: 100px;    /* Colocado espaçamento entre o texto e o cabeçalho. Removido o display: inline */
+}
+
+div img {
+    background: white;          /* retirado o fundo preto para aparecer o ícone de busca (lupa) escondido no fundo */
+}
+
+.botao-amarelo {
+    background-color: #ffaf43;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    position: relative;         /* Corrigido o posicionamento do botão Comprar na Tela Home */
+    bottom: 18%;
+    border: none;
+}
+
+.botao-amarelo:hover {
+    background-color: #c44f00;
+}
+
+.container {
+    height: 500px;    
+    text-align: center;
+}
+
+.icone {
+    width: 15px;
+    height: 15px;
+}
+
+
+/** 
+  *
+  *  ESTILOS HOME 
+  *
+  **/
+
+#container-de-descricao {
+    background-color: #2274a5;
+    color: white;
+    font-size: 14pt;
+}
+
+#container-de-descricao>ol {
+    padding: 15px 45%;          /* posiciona a lista junto com os números ao centro da tela */
+}
+
+#container-para-comprar {
+    background-color: #e7eb90;
+}
+
+#container-para-comprar>p {
+    color: #c44f00;
+    padding: 100px 0;
+    font-size: 60px;    
+}
+
+
+/**
+  *
+  *  ESTILOS COMPRAR 
+  *
+  **/
+
+div:nth-child(2),
+div:last-child {
+    text-align: center;
+}
+
+table {
+    width: 60%;                 
+    margin: auto;                   /* arrumado o margin para centralizar a tabela em todos os sentidos, por a tabela ser block */
+    text-align: center;             /* centralizando o texto dentro da tabela */
+}
+
+td button {
+    background-color: #fadf63;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    border: none;
+}
+
+td button:hover {
+    background-color: #c4ad31;
+}
+
+.container-do-search {
+    margin-top: 20px;
+    height: 100px;    
+}
+
+.container-do-search img:hover {
+    opacity: 30%;           /* deixa a lupa mais claro ao passar o mouse */
+}
+
+.container-do-search img:active {
+    opacity: 100%;              /* deixa a lupa de novo preta ao clicar com o mouse */
+}
+
+#back-button {
+    background-color: white;
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 10px;
+    color: black;
+    position: absolute;         /* Corrigido o posicionamento do botão voltar na Tela Comprar */
+    bottom: 25%;                /* corrige posicionamento em relação ao fundo */
+    right: 50%;                 /* corrige posicionamento em relação à direita */
+}
+
+#back-button:hover {
+    background-color: #635a3d
+}
