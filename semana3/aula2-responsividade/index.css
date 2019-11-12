@@ -1,0 +1,136 @@
+/*RESET*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*COM GRID*/
+
+/*FAIXA-VERMELHA*/
+
+.barra-red {
+  background: #ff0000;
+  color: transparent;
+  margin: 0;
+  padding: 2em;
+  border: none;  
+}
+
+/*CONTAINER*/
+
+#main-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  text-align: center;
+  font-weight: bold;
+}
+
+/*DIV COM ITEMS*/
+
+#main-container div {
+  margin: 1em;
+  border: 1px solid black;
+  padding: 4em;  
+  grid-column-end: span 2;
+}
+
+.item1 {
+  background: blue;
+}
+
+.item2 {
+  background: yellow;
+}
+
+.item3 {
+  background: green;
+}
+
+.item4 {
+  background: blue;
+}
+
+.item5 {
+  background: yellow;
+}
+
+.item6 {
+  background: green;
+}
+
+/*CAIXA MAIOR 1*/
+
+.item7 {
+  display: flex;
+  background: black;
+  color: white;
+  grid-column: span 3;
+  grid-row: span 2;
+  justify-content: center;
+  align-items: center;
+}
+
+/*CAIXA MAIOR 2*/
+
+.item8 {
+  display: flex;
+  background: black;
+  color: white;
+  grid-column: span 3;
+  grid-row: span 2;
+  justify-content: center;
+  align-items: center;
+}
+
+.item9 {
+  background: none;
+}
+
+.item10 {
+  background: none;
+}
+
+.item11 {
+  background: none;
+}
+
+/*TELAS MÉDIAS*/
+
+@media screen and (max-width: 800px) {
+  #main-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+
+  .item3 {
+    grid-column: span 4;
+  }
+
+  .item6 {
+    grid-column: span 4;
+  }
+
+  .item7 {
+    grid-column: 1;
+  }
+
+  .item8 {
+    grid-column: 3;
+  }
+
+  .item11 {
+    grid-column: span 4;
+  }
+}
+
+/*TELAS PEQUENAS*/
+
+@media screen and (max-width: 500px) {
+  #main-container {
+    display: block;
+  }
+}
+
+/*COM FLEXBOX*/
