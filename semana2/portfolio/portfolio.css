@@ -1,0 +1,70 @@
+/*    RESET   */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-weight: 300;
+  font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+body {
+  background: #EDEFEF;
+}
+
+/*    CABEÇALHO   */
+
+#dark-green {           /* estiliza o header da página inicial */
+  background: #3A5854;
+  color: white;
+  font-size: 20pt;
+  padding: 150px;
+  border: 1px solida black;
+}
+
+#dark-green p {       /* estiliza o texto principal*/
+  font-weight: bold;
+  text-shadow: 3px 3px black;
+  text-align: center;
+}
+
+#dark-green img {       /* estiliza a foto */
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  border: 3px solid white;
+}
+
+/* CORPO*/
+
+#barra-menu {           /*estiliza a barra onde estão os botões do menu */
+  background: #7BAB99;
+  margin: none;
+  text-align: center;
+}
+
+button {          /*estiliza os botões do menu na página inicial */
+background: none;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+}
+
+button:hover {
+  background: #659D88;        /* mudar cor quando passa o mouse */
+  outline-color: #4F8F77;
+  }
+
+/*FOOTER*/
+
+footer{
+  font-weight: bold;  /*teste visual*/
+  font-size: 18pt; /*teste visual*/
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
