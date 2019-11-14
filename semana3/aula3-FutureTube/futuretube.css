@@ -1,0 +1,73 @@
+/*RESET*/
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'Arial', sans-serif;
+}
+/*estiliza a faixa laranja*/
+header {
+  background: darkorange;
+  font-weight: bold;
+  font-size: 18pt;
+  padding: 15px;
+}
+
+/*posiciona o formulário de busca*/
+form {
+  position: fixed;
+  top: 10px;
+  right: 50px;
+}
+
+/*estiliza a barra de busca*/
+input {
+  width: 200px;
+  padding: 2%;
+}
+
+/*CONTAINER*/
+#main-container {
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10%;  
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/*mensagem junto com as imagens*/
+#main-container p {
+  text-align: left;
+  padding: 10px 0;
+}
+
+/* galeria grid*/
+#main-container div {
+  border: 1px solid green;
+  margin: 5px;
+  align-self: center;
+}
+
+/*dimensiona as imagens*/
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*estiliza o vídeo*/
+video {
+  padding: 15px;
+}
+
+/*estiliza o botão de voltar*/
+button {
+  margin-left: 20px;
+}
+
+/*estiliza o footer*/
+footer {
+  background: black;
+  color: white;
+  padding: 10px;  
+  font-size: 16pt;
+  position: fixed;
+  bottom: 0;
+}
