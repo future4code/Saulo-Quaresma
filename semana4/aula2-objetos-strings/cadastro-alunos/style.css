@@ -1,0 +1,23 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+header {
+   padding: 25px 20px;
+}
+
+header h1 {
+   margin-bottom: 20px;
+}
+
+#main-container {
+   border: 1px solid orange;
+   padding: 5px;
+   margin: 20px;
+}
+
+h2 {
+   text-align: center;
+   margin-left: 20px;
+}
