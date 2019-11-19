@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+  border-bottom: 1px solid lightgray;
+  font-weight: bold;
+}
+
+input {
+  margin-left: 20px;
+}
+
+select {
+  margin-left: 20px;
+}
+
+button {
+  margin-left: 20px;
+  padding: 0 5px;
+}
+
+#planner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-weight: bold;
+  font-size: 14pt;
+}
