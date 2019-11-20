@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
   <head>
     <meta charset="UTF-8">
@@ -11,12 +11,11 @@
   </head>
 
   <body>
-    <div id="main-container">
       <header>
         <label for="novaTarefa">Nova Tarefa:</label>
-        <input type="text" name="nova-tarefa" id="novaTarefa">
-
-        <select name="semana" id="opcaoDiaSemana">
+        <input id="inputDoUsuario" placeholder="Digite aqui sua tarefa:"> <!--Adiciona campo de input para o usuário-->
+        
+        <select id="opcaoDiaSemana">  <!--Adiciona seletor do dia da semana-->
           <option value="segunda">Segunda-feira</option>
           <option value="terca">Terça-feira</option>
           <option value="quarta">Quarta-feira</option>
@@ -26,23 +25,38 @@
           <option value="domingo">Domingo</option>
         </select>
 
-        <button onclick="adicionarTarefa()">Criar Tarefa!</button>
+        <button id="botaoAdicionar" onclick="botaoAdicionarTarefa()">Criar Tarefa!</button> <!--Coloca um botão para adicionar a tarefa-->
       </header>
 
     <br><br>
 
-      <section id="planner">
-        <div class="diaSemana"> Segunda </div>
-        <div class="diaSemana"> Terça </div>
-        <div class="diaSemana"> Quarta </div>
-        <div class="diaSemana"> Quinta </div>
-        <div class="diaSemana"> Sexta </div>
-        <div class="diaSemana"> Sábado </div>
-        <div class="diaSemana"> Domingo </div>
-      </section>
-    </div>
+      <section id="main-container">   <!--Bloco contendo os dias da semana no planner-->
 
+        <article id="caixa-segunda">  <!--Adiciona a coluna da segunda-feira-->
+          Segunda-feira
+        </article>
+        <article id="caixa-terca">    <!--Adiciona a coluna da terça-feira-->
+          Terça-feira
+        </article>
+        <article id="caixa-quarta">   <!--Adiciona a coluna da quarta-feira-->
+          Quarta-feira
+        </article>
+        <article id="caixa-quinta">    <!--Adiciona a coluna da quinta-feira-->
+          Quinta-feira
+        </article>
+        <article id="caixa-sexta">      <!--Adiciona a coluna da sexta-feira-->
+          Sexta-feira
+        </article>
+        <article id="caixa-sabado">     <!--Adiciona a coluna do sábado-->
+          Sábado
+          <ul></ul>
+        </article>
+        <article id="caixa-domingo">      <!--Adiciona a coluna do domingo-->
+          Domingo
+        </article>
 
+      </section>   
+      
+      <button id="reseter" onclick="removelistaTarefas()">Limpar tarefas!</button>
   </body>
-
 </html>
