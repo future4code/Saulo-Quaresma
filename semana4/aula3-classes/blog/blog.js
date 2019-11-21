@@ -7,7 +7,7 @@ class Post {
    }
 }
 
-const arrayPosts = []
+const arrayPosts = []            //adiciona um array
 
 function aoClicarNoBotaoCriar(){
    const tituloPost = document.getElementById("inputDoTitulo").value
@@ -18,6 +18,6 @@ function aoClicarNoBotaoCriar(){
    let novoPost = new Post(tituloPost, autorPost, emailPost, mensagemPost)  //cria uma nova instância com o que vem do input.
    //console.log(novoPost)             //visualiza que a instância foi criada e colocado os valores dos inputs
    
-   arrayPosts.push(novoPost)
-   console.log(arrayPosts)  
+   arrayPosts.push(novoPost)           //adiciona no array as informaçoes dos inputs
+   console.log(arrayPosts)             //visualiza no console o array com os valores dentro
 }
