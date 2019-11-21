@@ -15,23 +15,30 @@
       
       <h1>Formulário de Inscrições Future4</h1>
 
-      <form>
-         <label for="name"> Nome: </label><br>
-         <input type="text" id="name" placeholder="Nome"><br><br>
-         <label for="idade"> Idade: </label><br>
-         <input type="text" id="idade" placeholder="Idade"><br><br>
-         <label for="email"> E-mail: </label><br>
-         <input type="email" id="email" placeholder="e-mail"><br><br>
+      <form id="main-body">
+         <label for="name"> Nome: </label><br>                             <!-- adiciona um nome para o campor-->
+         <input id="form-nome" type="text" placeholder="Nome"><br><br>     <!-- adiciona input para o nome-->
+         <label for="idade"> Idade: </label><br>                           <!-- adiciona um nome para o campor-->
+         <input id="form-idade" type="number" placeholder="Idade"><br><br> <!-- adiciona input para a idade-->
+         <label for="email"> E-mail: </label><br>                          <!-- adiciona um nome para o campor-->
+         <input id="form-email" type="email" placeholder="E-mail"><br><br> <!-- adiciona input para o email-->
       </form>
 
-      <button onclick="novoCadastro()"> Cadastrar </button>
+      <button onclick="novoCadastro()"> Cadastrar </button>          <!-- adiciona botão para cadastrar as informações-->
 
    </header>
 
-   <h2> Usuários Cadastrados</h2> <br>
+   <h2><u> Usuários Cadastrados</u></h2> <br>
 
    <section id="main-container">
+
+      <div id="usuarioCadastrado">        <!-- adiciona um container para as <p> quer irão ser adicionados com as informações-->
+
+      </div>
+
    </section>
+
+   <button id="reseter" onclick="removelistaAlunos()">Limpar Lista</button>         <!-- adiciona um botão para resetar a lista-->
 
 </body>
 
