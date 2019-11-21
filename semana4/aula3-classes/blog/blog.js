@@ -1,20 +1,23 @@
-class meuPost {
+class Post {
    constructor(titulo, autor, email, mensagem) {
-      this.inputDoTitulo = titulo
-      this.inputDoAutor = autor
-      this.inputDeEmail = email
-      this.inputDaMensagem = mensagem
+      this.tituloPost = titulo
+      this.autorPost = autor
+      this.emailPost = email
+      this.mensagemPost = mensagem
    }
 }
 
+const arrayPosts = []
+
 function aoClicarNoBotaoCriar(){
-   meuPost.inputDoTitulo = document.getElementById("inputDoTitulo").value
-   meuPost.inputDoAutor = document.getElementById("inputDoAutor").value
-   meuPost.inputDeEmail = document.getElementById("inputDeEmail").value
-   meuPost.inputDaMensagem = document.getElementById("inputDaMensagem").value
+   const tituloPost = document.getElementById("inputDoTitulo").value
+   const autorPost = document.getElementById("inputDoAutor").value
+   const emailPost = document.getElementById("inputDeEmail").value
+   const mensagemPost = document.getElementById("inputDaMensagem").value
 
-   const novoPost = new meuPost(meuPost.inputDoTitulo, meuPost.inputDoAutor, meuPost.inputDeEmail, meuPost.inputDaMensagem)   //cria uma nova instância com o que vem do input. Ver console.
-   console.log(novoPost)
- }
-
- 
+   let novoPost = new Post(tituloPost, autorPost, emailPost, mensagemPost)  //cria uma nova instância com o que vem do input.
+   //console.log(novoPost)             //visualiza que a instância foi criada e colocado os valores dos inputs
+   
+   arrayPosts.push(novoPost)
+   console.log(arrayPosts)  
+}
