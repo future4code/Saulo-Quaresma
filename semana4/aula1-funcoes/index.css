@@ -1,33 +1,95 @@
-*{
+*{                          /*reset na página*/
   margin: 0;
   padding: 0;
 }
 
-header {
+body {                      /*adiciona uma cor de fundo no body*/
+  background: lightgoldenrodyellow;
+}
+
+header {                    /*estiliza o cabeçalho*/
   display: flex;
   justify-content: center;
   padding: 25px 0;
-  border-bottom: 1px solid lightgray;
+  border: 2px solid chocolate;
   font-weight: bold;
+  background: peru;
 }
 
-input {
+label {                   /*Estiliza o nome do input*/
+  color: white;
+  font-size: 16pt;
+}
+
+input {                     /*adiciona uma margem para o input*/
   margin-left: 20px;
 }
 
-select {
+select {                     /*adiciona uma margem para o seletor do dia da semana*/
   margin-left: 20px;
 }
 
-button {
+button {                     /*adiciona uma margem e um padding para o botão de adicionar tarefa*/
   margin-left: 20px;
-  padding: 0 5px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 10px;
+  background: brown;
+  color: white;
 }
 
-#planner {
+#main-container {          /*reposiciona os dias da semana em colunas lado a ladot*/
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   font-weight: bold;
-  font-size: 14pt;
+}
+
+article {                 /*estiliza o conteúdo dentro dos artigos*/  
+  border: 1px dotted orange;
+  width: 150px;
+  text-align: center;
+  list-style-position: inside;
+}
+
+article ul {                  /*retira o negrito da lista <ul> e adiciona uma margem para cima*/
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+#reseter {
+  position: fixed;
+  bottom: 15px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 450px){
+  header{
+    display: inline-block;
+    justify-items: center;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 100%;
+  }
+
+  button {
+    padding: 5px;
+    margin-top: 10px;
+  }
+
+  input {
+    padding: 5px;
+  }
+
+  #main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;    
+    margin-left: 20px;
+  }
+
+  #reseter { 
+    position: fixed;
+    bottom: 20px;   
+    padding: 5px;
+  }
 }
