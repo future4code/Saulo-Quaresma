@@ -1,0 +1,52 @@
+* {
+   margin: 2000;
+   padding: 0;
+   font-family: 'Roboto', sans-serif;
+}
+
+main {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   margin: 25px;
+}
+
+section {
+   margin: 15px;
+   padding: 20px;
+   min-width: 20vw;
+   max-width: 35vw;
+   justify-self: center;
+}
+
+#container-controlador {
+   display: flex;
+   flex-direction: column;
+   border: 1px solid orange;
+}
+
+#botao-cadastro {
+   width: 130px;
+   margin: 10px 0;
+}
+
+#container-despesas {
+   display: flex;
+   flex-direction: column;
+   border: 1px solid orange;
+}
+
+#botao-filtrar {
+   width: 50px;
+   margin: 10px 0;
+}
+
+#botao-limpar-filtros {
+   width: 100px;
+   margin: 10px 0;
+}
+
+#container-extrato {
+   display: flex;
+   flex-direction: column;
+   border: 1px solid orange
+}

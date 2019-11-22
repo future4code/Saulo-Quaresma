@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" type="text/css" href="controlador.css">
+   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+   <script src="controlador.js" defer></script>
+   <title>Controlador de Despesas</title>
+</head>
+
+<body>
+   <main>
+      <section id="container-controlador">
+         <h2> Controlador de Despesas </h2>
+         <h3> Cadastrar Despesa </h3>
+         <div>
+            <form id="formulario">
+
+               <label for="nomeDespesa"> Nome da Despesa: </label>
+               <input type="text" id="nomeDespesa" placeholder="nome da despesa">
+
+               <label for="valorDinheiro"> Valor: </label>
+               <input type="text" id="valorDinheiro" placeholder="R$">
+
+               <label for="tipoDespesa">Tipo (Casa, Viagem, Lazer, Outros):</label>
+               <select name="tipo" id="tipoDespesa">
+                  <option value="Casa"> Casa </option>
+                  <option value="Viagem"> Viagem </option>
+                  <option value="Lazer"> Lazer </option>
+                  <option value="Outros"> Outros </option>
+               </select>
+
+               <label for="descricao"> Descrição: </label>
+               <input type="text" id="descricao">
+            </form>
+         </div>
+
+         <button id="botao-cadastro" onclick="aoClicarNoBotaoCadastro()"> Cadastrar Despesa </button>
+
+      </section>
+
+      <section id="container-despesas">
+         <h2> Despesas Detalhadas </h2>
+         <select name="tipo" id="tipoDespesa">
+            <option value="casa"> Casa </option>
+            <option value="viagem"> Viagem </option>
+            <option value="lazer"> Lazer </option>
+            <option value="outros"> Outros </option>
+         </select>
+
+         <label for="minimo"> Valor Mínimo: </label>
+         <input type="text" id="minimo">
+
+         <label for="maximo"> Valor Máximo: </label>
+          <input type="text" id="maximo">
+
+          <button id="botao-filtrar"> Filtrar </button> <button id="botao-limpar-filtros"> Limpar Filtros </button>
+
+      </section>
+
+      <section id="container-extrato">
+         <h2> Extrato </h2>
+
+      </section>
+      <h4> Listas de Despesas </h4>
+      <section id="container-listaDespesa">
+
+      </section>
+      
+   
+   </main>
+</body>
+
+</html>
