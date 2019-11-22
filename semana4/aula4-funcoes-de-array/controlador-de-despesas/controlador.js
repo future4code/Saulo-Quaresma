@@ -35,12 +35,10 @@ function aoClicarNoBotaoCadastro() {
 function listarNaPagina(){
    const listagem = document.getElementById("container-listaDespesa")
    for(const index of primeiroArray){
-
-
-      // listagem.innerHTML += "<div>" + "<p>" + "Nome da Despesa: " + index.nomeDesp + "</p>" + "</div>"
-      // listagem.innerHTML += "<div>" + "<p>" + "Valor: " + "R$: " + index.valores + "</p>" + "</div>"
-      // listagem.innerHTML += "<div>" + "<p>" + "Tipo de Despesa: " + index.tipoDesp + "</p>" + "</div>"
-      // listagem.innerHTML += "<div>" + "<p>" +"Descrição: " + index.descDesp + "</p>" + "</div>"
+      listagem.innerHTML += "<div>" + "<p>" + "Nome da Despesa: " + index.nomeDesp + "</p>" + "</div>"
+      listagem.innerHTML += "<div>" + "<p>" + "Valor: " + "R$: " + index.valores + "</p>" + "</div>"
+      listagem.innerHTML += "<div>" + "<p>" + "Tipo de Despesa: " + index.tipoDesp + "</p>" + "</div>"
+      listagem.innerHTML += "<div>" + "<p>" +"Descrição: " + index.descDesp + "</p>" + "</div>"
    }
 }
 
