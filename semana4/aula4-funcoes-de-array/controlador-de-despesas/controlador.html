@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
    <meta charset="UTF-8">
@@ -18,12 +18,9 @@
          <h3> Cadastrar Despesa </h3>
          <div>
             <form id="formulario">
-
-               <label for="nomeDespesa"> Nome da Despesa: </label>
-               <input type="text" id="nomeDespesa" placeholder="nome da despesa">
-
-               <label for="valorDinheiro"> Valor: </label>
-               <input type="text" id="valorDinheiro" placeholder="R$">
+               
+               <label for="valorGasto"> Valor: </label>
+               <input type="number" id="valorGasto" placeholder="R$">
 
                <label for="tipoDespesa">Tipo (Casa, Viagem, Lazer, Outros):</label>
                <select name="tipo" id="tipoDespesa">
@@ -34,7 +31,7 @@
                </select>
 
                <label for="descricao"> Descrição: </label>
-               <input type="text" id="descricao">
+               <input type="text" id="descricao" placeholder="Descreva a despesa">
             </form>
          </div>
 
@@ -42,36 +39,51 @@
 
       </section>
 
-      <section id="container-despesas">
+      <section id="container-despesas-detalhes">
          <h2> Despesas Detalhadas </h2>
-         <select name="tipo" id="tipoDespesa">
-            <option value="casa"> Casa </option>
-            <option value="viagem"> Viagem </option>
-            <option value="lazer"> Lazer </option>
-            <option value="outros"> Outros </option>
+
+         <label for="tipoDespesaDetalhes">Tipo (Casa, Viagem, Lazer, Outros):</label>
+         <select name="tipo" id="tipoDespesaDetalhes">
+            <option value="Casa"> Casa </option>
+            <option value="Viagem"> Viagem </option>
+            <option value="Lazer"> Lazer </option>
+            <option value="Outros"> Outros </option>
          </select>
 
          <label for="minimo"> Valor Mínimo: </label>
-         <input type="text" id="minimo">
+         <input type="number" id="minimo" placeholder="Valor mínimo:">
 
          <label for="maximo"> Valor Máximo: </label>
-          <input type="text" id="maximo">
+         <input type="number" id="maximo" placeholder="Valor máximo:">
 
-          <button id="botao-filtrar"> Filtrar </button> <button id="botao-limpar-filtros"> Limpar Filtros </button>
+         <button id="botao-filtrar" onclick="aoClicarBotaoFiltro()"> Filtrar </button>
+         <button id="botao-limpar-filtros" onclick="aoClicarBotãoLimparFiltros()"> Limpar Filtros </button>
 
       </section>
 
       <section id="container-extrato">
          <h2> Extrato </h2>
 
-      </section>
-      <h4> Listas de Despesas </h4>
-      <section id="container-listaDespesa">
+         <article>
+
+            <div id="valorTotalExtrato"> Valor Total:
+
+            </div>
+
+
+         </article>
 
       </section>
 
-      <div>
-      
+      <h3> Lista de Despesas </h3>
+      <section id="lista-despesa">
+
+      </section>
+
+      <h3> Resultados da Filtragem </h3>
+      <section id="resultados-filtragem">
+   
+      </section>
    
    </main>
 </body>

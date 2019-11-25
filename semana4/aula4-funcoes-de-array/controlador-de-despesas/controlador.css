@@ -1,52 +1,203 @@
 * {
-   margin: 2000;
+   margin: 0;
    padding: 0;
    font-family: 'Roboto', sans-serif;
 }
 
 main {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   margin: 25px;
+  text-align: center;
 }
 
-section {
-   margin: 15px;
-   padding: 15px;
-   min-width: 20vw;
-   max-width: 35vw;
-   justify-self: center;
-}
-
+/**QUADRADO DO CONTROLADOR DE DESPESAS*/
 #container-controlador {
-   display: flex;
-   flex-direction: column;
    border: 1px solid orange;
+   border-radius: 10px;
+   display: inline-flex;
+   flex-direction: column;
+   width: 350px;
+   height: 310px;
+   margin: 2em;
+   padding: 1em;
+   text-align: left;
+}
+
+#container-controlador h2 {
+   padding-bottom: 10px;
+}
+
+#container-controlador h3 {
+   padding-bottom: 10px;
+}
+
+#container-controlador label {
+   display: block;
+   padding: 5px 0;
 }
 
 #botao-cadastro {
-   width: 130px;
-   margin: 10px 0;
+   max-width: 130px;
+   margin-top: 15px;
+   padding: 5px;
+   background: orange;
+   border-color: darkorange;
+   border-radius: 10px;
+   color: white;
+   outline: none;
 }
 
-#container-despesas {
-   display: flex;
-   flex-direction: column;
+#botao-cadastro:hover{
+   background: darkorange;
+   border-color: peru;
+}
+
+/**QUADRADO DO DESPESAS DETALHADAS*/
+#container-despesas-detalhes {
    border: 1px solid orange;
+   border-radius: 10px;
+   display: inline-flex;
+   flex-direction: column;
+   width: 350px;
+   height: 310px;
+   margin: 2em;
+   padding: 1em;
+   text-align: left;
+}
+
+#container-despesas-detalhes h2 {
+   padding-bottom: 10px;
+}
+
+#container-despesas-detalhes label {
+   padding: 10px 0;
+}
+
+#container-despesas-detalhes select {
+   float: right;
+   display: flex;
+   width: 85px;
+}
+
+#minimo {
+   width: 150px;
+}
+
+#maximo {
+   width: 150px;
+}
+
+#container-despesas-detalhes input {
+   display: flex;
+   max-width: 200px;
 }
 
 #botao-filtrar {
-   width: 50px;
-   margin: 10px 0;
+   width: 60px;
+   margin-top: 20px;
+   padding: 5px;
+   background: orange;
+   border-color: darkorange;
+   border-radius: 10px;
+   color: white;
+   outline: none;
+}
+
+#botao-filtrar:hover{
+   background: darkorange;
+   border-color: peru;
 }
 
 #botao-limpar-filtros {
-   width: 100px;
-   margin: 10px 0;
+   max-width: 130px;
+   margin-top: 15px;
+   padding: 5px;
+   background: orange;
+   border-color: darkorange;
+   border-radius: 10px;
+   color: white;
+   outline: none;
 }
 
+#botao-limpar-filtros:hover{
+   background: darkorange;
+   border-color: peru;
+}
+
+/**QUADRADO DO DESPESAS DETALHADAS*/
 #container-extrato {
+   border: 1px solid orange;
+   border-radius: 10px;
+   display: inline-flex;
+   flex-direction: column;
+   width: 350px;
+   height: 310px;
+   margin: 2em;
+   padding: 1em;
+   text-align: left;
+}
+
+#valorTotalExtrato {
+   display: flex;
+   padding: 30px 0 0 50px;
+   font-weight: bold;
+}
+
+#valorTotalExtrato p {
+   padding-left: 10px;
+   font-weight: normal;
+}
+
+/**LISTA DE DESPESAS*/
+#lista-despesa {
    display: flex;
    flex-direction: column;
-   border: 1px solid orange
+   margin: 20px;
+   text-align: left;
+   border: 1px dotted orange;
+   border-radius: 10px;
+}
+
+#lista-despesa h3 {
+   padding: 20px 0;
+   text-align: center;
+}
+
+#lista-despesa div {
+   font-weight: bold;
+   margin: 0 20px;
+   padding: 5px 0;
+}
+
+#lista-despesa p {
+   display: inline-flex;
+   flex-direction: column;
+   font-weight: normal;
+   margin-left: 10px;
+}
+
+/**RESULTADOS FILTRAGEM*/
+#resultados-filtragem {
+   display: flex;
+   flex-direction: column;
+   margin: 20px;
+   text-align: left;
+   border: 1px dotted orange;
+   border-radius: 10px;
+}
+
+#resultados-filtragem h3 {
+   padding: 20px 0;
+   text-align: center;
+}
+
+#resultados-filtragem div {
+   font-weight: bold;
+   margin: 0 20px;
+   padding: 5px 0;
+}
+
+#resultados-filtragem p {
+   display: inline-flex;
+   flex-direction: column;
+   font-weight: normal;
+   margin-left: 10px;
 }
