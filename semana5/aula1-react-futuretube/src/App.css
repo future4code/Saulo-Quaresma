@@ -1,0 +1,69 @@
+.App {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  display: flex;
+  background: orange;
+  width: 100%;
+}
+
+.header p {
+  font-weight: bold;
+  font-size: 20pt;
+  margin-left: 20px;
+}
+
+form {
+  position: fixed;
+  top: 25px;
+  right: 50px;
+}
+
+input {
+  width: 200px;
+  padding: 2%;
+}
+
+#container-images {
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10%;
+  justify-content: center;
+  margin-top: 50px; 
+}
+
+/*nomes dos vídeos junto com as imagens*/
+#container-images p {
+  text-align: left;
+  padding: 10px 0;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+/* galeria grid*/
+#container-images div {
+  border: 1px solid green;
+  margin: 5px;
+  align-self: center;
+}
+
+/*dimensiona as imagens*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Footer*/
+
+footer {
+  width: 100%;
+  background: rgb(107, 107, 107);
+  color: white;
+  font-weight: bold;
+  padding: 5px;  
+  font-size: 16pt;
+  position: fixed;
+  bottom: 0;  
+}
