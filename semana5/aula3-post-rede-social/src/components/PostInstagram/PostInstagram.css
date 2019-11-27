@@ -1,0 +1,48 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+#main-container {
+   display: flex;
+   justify-content: center;
+   margin: 10px 50px 15px 50px;
+}
+
+.post-container {
+   text-align: center;
+   border: 1px solid lightgrey;
+   width: 300px;
+}
+
+.post-container p {
+   padding: 10px;
+   text-align: left;
+   margin-left: 50px;
+}
+
+.post-container img {
+   width: 100%;
+   height: auto;
+}
+
+
+#container-icones img {
+   width: 20px;
+}
+
+.icone-favoritos {
+   width: 20px;
+   margin-left: 10px; 
+}
+
+.icone-comentar {
+   width: 20px;
+   margin-right: 10px; 
+}
+
+button {
+   background: none;
+   border: none;
+   outline: none;
+}
