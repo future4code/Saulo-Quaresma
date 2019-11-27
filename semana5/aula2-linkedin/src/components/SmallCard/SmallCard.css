@@ -1,0 +1,23 @@
+#scard-container {
+   margin:0px;
+   width: 400px;
+}
+
+.container-email {
+   border: 1px solid black;
+   text-align: left;
+   padding: 20px;
+}
+
+.container-endereco {
+   text-align: left;
+   border: 1px solid black; 
+   padding: 20px;
+   margin: 10px 0;
+}
+
+img {
+   float: left;
+   margin-right: 10px;
+   width: 20px;
+}
