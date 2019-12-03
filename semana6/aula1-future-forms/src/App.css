@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.App button {
+ margin: 0 0 20px 50px;
+ border: 1px solid black;
+ border-radius: 15px;
+ padding: 2px 5px;
+ font-weight: bold;
+}
