@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "915b61d7-4ef5-4535-a89f-08ffd8d56533",
-		"name": "Playlists",
-		"description": "Criando as playlists para o exerício da tarde.",
+		"_postman_id": "45ddc08e-6d75-4b3f-8902-78de1c7ae3ed",
+		"name": "Playlists-exercício",
+		"description": "Criando a playlists do exercício da tarde",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -25,7 +25,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"\"\n}",
+					"raw": "{\n\t\"name\": \"Românticas\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -51,9 +51,6 @@
 		},
 		{
 			"name": "getAllPlaylists",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [
@@ -63,15 +60,6 @@
 						"type": "text"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
 					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/getAllPlaylists",
 					"protocol": "https",
@@ -108,7 +96,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"playlistId\": \"cb92e977-379d-4b64-9793-034b8e7c93e1\",\n\t\"music\": {\n\t\t\"name\": \"Hear Me Now\",\n\t\t\"artist\": \"Alok, Bruno Martini feat. Zeeba\",\n\t\t\"url\": \"https://www.youtube.com/watch?v=JVpTp8IHdEg\"\n\t}\n}",
+					"raw": "{\n\t\"playlistId\": \"dddc2186-a26b-48da-bafb-66ba20e88ad6\", \n    \"music\": {\n        \"name\": \"DNA\", \n        \"artist\": \"BTS\",\n        \"url\": \"https://www.youtube.com/watch?v=MBdVXkSdhwU\"\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -134,9 +122,6 @@
 		},
 		{
 			"name": "getPlaylistMusics",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [
@@ -146,17 +131,8 @@
 						"type": "text"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/getPlaylistMusics/",
+					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/getPlaylistMusics/ca607bd4-21a4-4d7a-922d-9ec22061fb0b",
 					"protocol": "https",
 					"host": [
 						"us-central1-spotif4",
@@ -167,17 +143,14 @@
 						"api",
 						"playlists",
 						"getPlaylistMusics",
-						""
+						"ca607bd4-21a4-4d7a-922d-9ec22061fb0b"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "searchPlaylist",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "searchPlaylist ",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -187,17 +160,8 @@
 						"type": "text"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/searchPlaylist?name",
+					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/searchPlaylist?playlistName=MPB",
 					"protocol": "https",
 					"host": [
 						"us-central1-spotif4",
@@ -211,8 +175,8 @@
 					],
 					"query": [
 						{
-							"key": "name",
-							"value": null
+							"key": "playlistName",
+							"value": "MPB"
 						}
 					]
 				}
@@ -231,7 +195,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/removeMusicFromPlaylist?playlistId=cb92e977-379d-4b64-9793-034b8e7c93e1",
+					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/removeMusicFromPlaylist?playlistId=ca607bd4-21a4-4d7a-922d-9ec22061fb0b&musicId=c7a67d56-ab77-4f66-ab51-85fed1fb74b3",
 					"protocol": "https",
 					"host": [
 						"us-central1-spotif4",
@@ -246,12 +210,11 @@
 					"query": [
 						{
 							"key": "playlistId",
-							"value": "cb92e977-379d-4b64-9793-034b8e7c93e1"
+							"value": "ca607bd4-21a4-4d7a-922d-9ec22061fb0b"
 						},
 						{
 							"key": "musicId",
-							"value": "318bb545-4fbd-46fd-835c-15a760aa32f1",
-							"disabled": true
+							"value": "c7a67d56-ab77-4f66-ab51-85fed1fb74b3"
 						}
 					]
 				}
@@ -269,17 +232,8 @@
 						"type": "text"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/deletePlaylist?playlistId=cb92e977-379d-4b64-9793-034b8e7c93e1",
+					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/deletePlaylist?playlistId=0ffb2d83-4c0a-48f3-81bd-87029822051c",
 					"protocol": "https",
 					"host": [
 						"us-central1-spotif4",
@@ -294,7 +248,7 @@
 					"query": [
 						{
 							"key": "playlistId",
-							"value": "cb92e977-379d-4b64-9793-034b8e7c93e1"
+							"value": "0ffb2d83-4c0a-48f3-81bd-87029822051c"
 						}
 					]
 				}
