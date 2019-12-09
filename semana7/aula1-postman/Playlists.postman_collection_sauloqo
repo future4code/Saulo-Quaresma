@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "915b61d7-4ef5-4535-a89f-08ffd8d56533",
+		"name": "Playlists",
+		"description": "Criando as playlists para o exerício da tarde.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createPlaylist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth",
+						"value": "sauloqo",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/createPlaylist",
+					"protocol": "https",
+					"host": [
+						"us-central1-spotif4",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api",
+						"playlists",
+						"createPlaylist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPlaylists",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth",
+						"value": "sauloqo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/getAllPlaylists",
+					"protocol": "https",
+					"host": [
+						"us-central1-spotif4",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api",
+						"playlists",
+						"getAllPlaylists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addMusicToPlaylist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "auth",
+						"value": "sauloqo",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"playlistId\": \"cb92e977-379d-4b64-9793-034b8e7c93e1\",\n\t\"music\": {\n\t\t\"name\": \"Hear Me Now\",\n\t\t\"artist\": \"Alok, Bruno Martini feat. Zeeba\",\n\t\t\"url\": \"https://www.youtube.com/watch?v=JVpTp8IHdEg\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/addMusicToPlaylist",
+					"protocol": "https",
+					"host": [
+						"us-central1-spotif4",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api",
+						"playlists",
+						"addMusicToPlaylist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPlaylistMusics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth",
+						"value": "sauloqo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/getPlaylistMusics/",
+					"protocol": "https",
+					"host": [
+						"us-central1-spotif4",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api",
+						"playlists",
+						"getPlaylistMusics",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchPlaylist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth",
+						"value": "sauloqo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/searchPlaylist?name",
+					"protocol": "https",
+					"host": [
+						"us-central1-spotif4",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api",
+						"playlists",
+						"searchPlaylist"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeMusicFromPlaylist",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "auth",
+						"value": "sauloqo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/removeMusicFromPlaylist?playlistId=cb92e977-379d-4b64-9793-034b8e7c93e1",
+					"protocol": "https",
+					"host": [
+						"us-central1-spotif4",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api",
+						"playlists",
+						"removeMusicFromPlaylist"
+					],
+					"query": [
+						{
+							"key": "playlistId",
+							"value": "cb92e977-379d-4b64-9793-034b8e7c93e1"
+						},
+						{
+							"key": "musicId",
+							"value": "318bb545-4fbd-46fd-835c-15a760aa32f1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePlaylist",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "auth",
+						"value": "sauloqo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-spotif4.cloudfunctions.net/api/playlists/deletePlaylist?playlistId=cb92e977-379d-4b64-9793-034b8e7c93e1",
+					"protocol": "https",
+					"host": [
+						"us-central1-spotif4",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api",
+						"playlists",
+						"deletePlaylist"
+					],
+					"query": [
+						{
+							"key": "playlistId",
+							"value": "cb92e977-379d-4b64-9793-034b8e7c93e1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
