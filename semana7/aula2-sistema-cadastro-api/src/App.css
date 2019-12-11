@@ -19,22 +19,50 @@
 
 .App p {
   align-self: flex-start;
-  margin: 10px 0; 
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.App input {
+  padding: 2px;
 }
 
 .CadastroUser {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-style: italic;
 }
 
 .botaoListaUsers {
   display: block;
-  width: 150px;
+  background: #7f0000;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 5px;
+  text-shadow: 1px 2px black;
 }
 
-.App button {
+.botaoSalvar {
   margin-top: 10px;
-  width: 100px;
   align-self: center;
+  background: #7f0000;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-shadow: 1px 2px black;
+}
+
+.botaoDelete {
+  background: none;
+  border: none;
+  color: red;
+  font-weight: bold;
+  margin-left: 20px;
+  outline: none;
+}
+
+.App li {
+  margin: 10px 0;
 }
