@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  margin: 20px;
+  text-align: center;  
+}
+
+.App form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 30px 25px;  
+  border: 1px solid black;
+}
+
+.App p {
+  align-self: flex-start;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.App input {
+  padding: 2px;
+}
+
+.CadastroUser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: italic;
+}
+
+.botaoListaUsers {
+  display: block;
+  background: #7f0000;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 5px;
+  text-shadow: 1px 2px black;
+}
+
+.botaoSalvar {
+  margin-top: 10px;
+  align-self: center;
+  background: #7f0000;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-shadow: 1px 2px black;
+}
+
+.botaoDelete {
+  background: none;
+  border: none;
+  color: red;
+  font-weight: bold;
+  margin-left: 20px;
+  outline: none;
+}
+
+.App li {
+  margin: 10px 0;
+}
