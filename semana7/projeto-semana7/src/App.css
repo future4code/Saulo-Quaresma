@@ -1,0 +1,12 @@
+.App {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+
+.botaoDelete {
+   background: none;
+   border: none;
+   color: red;
+   font-weight: bold;
+}
