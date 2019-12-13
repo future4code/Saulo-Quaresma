@@ -32,6 +32,7 @@ class PokeData extends Component {
       console.log(pokePhoto)
    }
    
+   
    componentDidMount() {
       this.getPokemonTypes();
    }
@@ -50,5 +51,5 @@ class PokeData extends Component {
       )
    }
 }
-
+//COMENTANDO PARA REABRIR A PR
 export default PokeData;
