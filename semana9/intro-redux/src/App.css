@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
+}
+
+.App {
+  text-align: center;
+}
+
+.App h1 {
+  font-size: 52pt;
+  color: darkred;
+}
+
+.main-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 30px;
+  border: 1px solid darkgrey;
+}
+
+.App input {
+  padding: 5px;
+  margin: 10px;
+}
+
+.App button {
+  border: none;
+  background: none;
+  margin: 5px;
+  padding: 5px;
+}
