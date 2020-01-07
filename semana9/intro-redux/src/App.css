@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: lightgray;
+  background-color: rgb(226, 224, 224);
 }
 
 .App {
@@ -9,8 +9,9 @@ body {
 }
 
 .App h1 {
-  font-size: 52pt;
-  color: darkred;
+  font-size: 56pt;
+  color: crimson;
+  text-shadow: 1px 1px black;
 }
 
 .main-container {
@@ -25,6 +26,10 @@ body {
 .App input {
   padding: 5px;
   margin: 10px;
+}
+
+.list-container {
+
 }
 
 .App button {
