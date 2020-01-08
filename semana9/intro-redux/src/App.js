@@ -6,14 +6,14 @@ import Filters from './components/Filters/Filters'
 
 function App() {
   return (
-    <div className="App">
-      <h1>4Task</h1>
-      <div className="main-container">
-        <AddTask />
-        <TodoItem/>
-        <Filters />
+      <div className="App">
+        <h1>4Task</h1>
+        <div className="main-container">
+          <AddTask />
+          <TodoItem/>
+          <Filters />
+        </div>
       </div>
-    </div>
   );
 }
 

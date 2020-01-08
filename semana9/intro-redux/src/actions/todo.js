@@ -1,17 +1,17 @@
-//Possíveis actions creator para o projeto //
-const addTaskAction = newTask => {
+const addTaskAction = (newTask) => {
   return {
     type: "ADD_TASK",
     payload: {
-      newTask: newTask,
+      newTask: newTask,      
     }
   }
 }
 
-const removeTaskActionCreator = () => {
+const removeTaskActionCreator = (id) => {
   return {
     type: "REMOVE_TASK",
     payload: {
+      id: id,
     }
   }
 }
@@ -19,24 +19,35 @@ const removeTaskActionCreator = () => {
 const filterTaskByCompletedActionCreator = () => {
   return {
     type: "COMPLETED_TASK",
+    payload: {
+
+    }
   }
 }
 
 const filterTaskByPendingActionCreator = () => {
   return {
     type: "PENDING_TASK",
+    payload: {
+
+    }
   }
 }
 
-const markTaskAsCompletedActionCreator = () => {
+const markTaskAsCompletedActionCreator = (id) => {
   return {
     type: "MARKCOMPLETED_TASK",
+    payload: {
+      id: id,
+    }
   }
 }
 
 const removeMarkedTaskAsCompletedActionCreator = () => {
   return {
     type: "REMOVECOMPLETED_TASK",
+    payload: {
+
+    }
   }
 }
-  //Fim das possíveis actions creator //
