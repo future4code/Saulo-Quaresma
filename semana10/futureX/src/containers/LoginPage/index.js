@@ -48,7 +48,7 @@ class LoginPage extends Component {
           label="Password"
           value={password}
         />
-        <Button>Login</Button>
+        <Button onClick={this.props.goToTripsList}>Login</Button>
       </LoginWrapper>
     );
   }
@@ -56,7 +56,7 @@ class LoginPage extends Component {
 
 function mapDispatchToProps(dispatch) {
   return {
-    goToLoginPage: () => dispatch(push('/')),
+    goToTripsList: () => dispatch(push('/trips/list')),
   }
 }
 
