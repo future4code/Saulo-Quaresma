@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { push } from "connected-react-router";
+import { routes } from '../Router/index';
 
 class TripsDetailsPage extends Component {
    constructor(props) {
@@ -8,10 +11,17 @@ class TripsDetailsPage extends Component {
    render() {
       return (
          <div>
-            Detalhes de Viagens
+            <p>Detalhes de Viagens</p>
+            <button onClick={this.props.goToTripsList}>Voltar para Home</button>
          </div>
       )
    }
 }
 
-export default TripsDetailsPage;
+function mapDispatchToProps(dispatch) {
+   return {
+     goToTripsList: () => dispatch(push(routes.listTrips)),
+   }
+ }
+
+export default connect(null, mapDispatchToProps)(TripsDetailsPage);

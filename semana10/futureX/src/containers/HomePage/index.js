@@ -26,12 +26,13 @@ const HomePage = (props) => {
      <div>
         <Header>
           <SiteName>FutureX</SiteName>
-          <button onClick={props.goToLoginPage}>Login</button>
+          <button onClick={props.goToLoginPage}>Admin</button>
         </Header>
 
         <p>Encontre as melhores viagens para você aqui!</p>
 
-        <button onClick={props.goToListTripsPage}>Veja nossas viagens</button>
+        <p>Cadastra-se em uma de nossas viagens logo abaixo.</p>
+        <button onClick={props.goToListTripsPage}>Cadastrar</button>
      </div>
    );
  }
@@ -39,7 +40,7 @@ const HomePage = (props) => {
  function mapDispatchToProps(dispatch) {
    return {
      goToLoginPage: () => dispatch(push(routes.login)),
-     goToListTripsPage: () => dispatch(push(routes.listTrips))
+     goToListTripsPage: () => dispatch(push(routes.aplicationform))
    }
  }
 
