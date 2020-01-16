@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+// criar viagens = https://us-central1-missao-newton.cloudfunctions.net/futureX/:aluno/trips
+
 const baseURL = "https://us-central1-missao-newton.cloudfunctions.net/futureX/saulo"
 
 const getAllTripsAction = (trips) => {

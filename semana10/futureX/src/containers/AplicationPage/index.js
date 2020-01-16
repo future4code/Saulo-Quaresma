@@ -12,7 +12,10 @@ class AplicationPage extends Component {
       return (
          <div>
             <p>Formulário</p>
+            <button>Enviar</button>
+            
             <button onClick={this.props.goToHomePage}>Voltar para Home</button>
+            
          </div>
       )
    }
