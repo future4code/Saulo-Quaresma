@@ -5,7 +5,7 @@ import { routes } from '../Router';
 
 const creationForm = [
    {      
-      name: "tripName",
+      name: "name",
       type: "text",
       label: "Nome",
       required: true,
@@ -18,16 +18,15 @@ const creationForm = [
       required: true,
       pattern: "^[a-zA-Z]{30,}$"
    },
-   {
-      //^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/[12][0-9]{3}
-      name: "data",
+   {      
+      name: "date",
       type: "date",
       label: "Data",
       required: true,
       pattern: "",
    },
    {
-      name: "durantion",
+      name: "durationInDays",
       type: "number",
       label: "Duração (dias)",
       required: true,
@@ -40,7 +39,6 @@ class CreateTrip extends Component {
       super(props)
       this.state = {
          form: {},
-         selectPlanet: "Planeta",
       };
    }
 
@@ -51,7 +49,7 @@ class CreateTrip extends Component {
 
    handleOnSubmit = event => {
       event.preventDefault();
-      console.log(this.state.form);
+      this.props.createTrip();     
     };
 
    render() {
@@ -74,20 +72,20 @@ class CreateTrip extends Component {
                      />
                   </div>                                  
                ))}
-               <label>Planeta: </label>
-               <select >
+               <label htmlFor="planet">Planeta: </label>
+               <select id="planet" onChange={this.handleInputChanges} value={this.state.form.planet}>
                   <option value="">Planeta</option>
-                  <option value="mercurio">Mercúrio</option>
-                  <option value="venus">Vênus</option>
-                  <option value="terra">Terra</option>
-                  <option value="marte">Marte</option>
-                  <option value="jupiter">Júpiter</option>
-                  <option value="saturno">Saturno</option>
-                  <option value="urano">Urano</option>
-                  <option value="netuno">Netuno</option>
-
+                  <option value="Mercúrio">Mercúrio</option>
+                  <option value="Vênus">Vênus</option>
+                  <option value="Terra">Terra</option>
+                  <option value="Marte">Marte</option>
+                  <option value="Júpiter">Júpiter</option>
+                  <option value="Saturno">Saturno</option>
+                  <option value="Urano">Urano</option>
+                  <option value="Netuno">Netuno</option>
                </select>
-               <button type="submit">Enviar</button>  
+
+               <button type="submit" onClick={this.handleOnSubmit}>Criar</button>
             </form>
 
             <button onClick={this.props.goToTripsList}>Voltar para Home</button>
@@ -99,6 +97,7 @@ class CreateTrip extends Component {
 function mapDispatchToProps(dispatch) {
    return {
       goToTripsList: () => dispatch(push(routes.listTrips)),
+      createTrip: (postTrip) => dispatch(push(postTrip))
    }
 }
 
