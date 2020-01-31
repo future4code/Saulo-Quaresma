@@ -4,10 +4,10 @@ export const baseURL = "https://us-central1-missao-newton.cloudfunctions.net/gen
 
 // action-creator para tasks
 
-export const setAllTasks = (allTasks) => ({
+export const setAllTasks = (tasks) => ({
    type: "SET_TASKS",
    payload: {
-      allTasks,
+      tasks,
    }
 })
 

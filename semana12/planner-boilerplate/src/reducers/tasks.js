@@ -1,16 +1,16 @@
 const initialState = {
    allTasks: [],
-}
+};
 
-const tasksReducer = (state = initialState, action) => {
+export const tasksReducer = (state = initialState, action) => {
    switch (action.type) {
       case "SET_TASKS":
-         const taskList = action.payload.allTasks
-         return { ...state, allTasks: taskList };
+         const newTask = action.payload.tasks
+         return { ...state, allTasks: newTask };
 
       default:
          return state;
    };
-}
+};
 
 export default tasksReducer;

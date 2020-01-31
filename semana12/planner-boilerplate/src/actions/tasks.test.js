@@ -31,7 +31,7 @@ describe("create tasks", () => {
          status: 200
       })
 
-      await createTask("testando actions", 1, "sunday")(dispatchMock)
+      await createTask("testando actions", "sunday")(dispatchMock)
 
       expect(dispatchMock).toHaveBeenCalled()
    });
@@ -42,12 +42,13 @@ describe("set all tasks action", () => {
       const expectedAction = {
          type: "SET_TASKS",
          payload: {
-            allTasks: tasksMock
+            tasks: tasksMock
          }
       };
 
       const action = setAllTasks(tasksMock)
-
+      
       expect(action).toEqual(expectedAction)
+      expect(action.type).toEqual("SET_TASKS")
    });
 })

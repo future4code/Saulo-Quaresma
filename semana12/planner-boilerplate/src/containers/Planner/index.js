@@ -17,61 +17,61 @@ const StyledFormContainer = styled.form`
 const StyledDaysRow = styled.div`
   display: flex;
   justify-content: space-evenly;
-  font-weight: bold;
 `
 
-class Planner extends React.Component {
+export class Planner extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      form: {},
+      taskText: {},
+      selectedDay: "",
     }
-  }
+  };
 
   componentDidMount() {
-    this.props.getTasks()
+    this.props.getTasks();
   }
 
-  handleFormFields = event => {
-    const { name, value } = event.target;
-    this.setState( {form: { ...this.state.form, [name]: value }} )
-    console.log(event.target.value)
+  handleInputChange = event => {
+    const { value } = event.target;
+    this.setState({ taskText: value });
   };
 
-  sendNewTask = event => {
+  handleSelectChange = event => {
+    const { value } = event.target;
+    this.setState({ selectedDay: value });
+  };
+
+  handleOnSubmit = event => {
     event.preventDefault()
-    const { text, day } = this.state.form
-    this.props.createTask(text, day)
+    const day = this.state.selectedDay;
+    const text = this.state.taskText;
+    this.props.createTask(text, day);
+
+    this.setState({ taskText: {} });
+    this.setState({ selectedDay: "" });
   };
-
-  // resetInput = () => {
-  //   this.setState({ form: {} });
-  // }
-  
-  handleOnClickButton = () => {
-    this.sendNewTask()
-  }
-
-  
 
   render() {
+    const days = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"]
+
     return (
       <StyledMainContainer>
         <h1>Planner</h1>
 
         <div>
-          <StyledFormContainer onSubmit={this.sendTaskData}>
+          <StyledFormContainer>
             <label htmlFor="newTaskInput"><b>Nova Tarefa: </b></label>
             <input
               id="newTaskInput"
-              name="newTask"
+              name="text"
               type="text"
-              onChange={this.handleFormFields}
+              onChange={this.handleInputChange}
               placeholder="Nome da tarefa"
             />
 
-            <select value={this.state.form} onChange={this.handleFormFields}>
-              <option defaultValue>Dia da Semana</option>
+            <select value={this.state.value} onChange={this.handleSelectChange}>
+              <option selected value="">Dia da Semana</option>
               <option value="Segunda">Segunda</option>
               <option value="Terça">Terça</option>
               <option value="Quarta">Quarta</option>
@@ -81,26 +81,21 @@ class Planner extends React.Component {
               <option value="Domingo">Domingo</option>
             </select>
 
-            <button onClick={this.handleOnClickButton}>Adicionar</button>
+            <button onClick={this.handleOnSubmit}>Adicionar</button>
           </StyledFormContainer>
         </div>
 
         <StyledDaysRow>
-          <p>Segunda</p>
-          <p>Terça</p>
-          <p>Quarta</p>
-          <p>Quinta</p>
-          <p>Sexta</p>
-          <p>Sábado</p>
-          <p>Domingo</p>
+          {days.map(day => (
+            <div>
+              <h2>{day}</h2>
+              <ul>{this.props.allTasks.filter(task => task.day === day).map(task => <li>{task.text}</li>)}
+              </ul>
+            </div>
+          ))
+          };
         </StyledDaysRow>
 
-        <div>
-          {this.props.allTasks.map(task => 
-            <li key={task.id}>{task.text}</li>  
-          )}
-        </div>
-                
       </StyledMainContainer>
     )
   }
