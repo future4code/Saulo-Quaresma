@@ -1,0 +1,17 @@
+{
+  "name": "saulo-todolist",
+  "version": "1.0.0",
+  "description": "Uma lista de tarefas super fácil de usar",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tarefas",
+    "fácil",
+    "lista"
+  ],
+  "author": "Saulo Quaresma",
+  "license": "ISC"
+}
