@@ -1,15 +1,12 @@
-import { Transaction } from './Transaction';
+import { Transactions } from './Transaction';
 import fs = require('fs');
 
-export class UserAccount {
-   static addBalance(): number {
-      throw new Error("Method not implemented.");
-   }
+export class UserAccount {   
    name: string
    cpf: string
    age: number
    balance: number
-   transactions: Transaction[]
+   transactions: Transactions[]
 
    constructor(name: string, cpf: string, age: number) {
       this.name = name;
