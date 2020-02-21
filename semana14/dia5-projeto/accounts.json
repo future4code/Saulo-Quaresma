@@ -1,0 +1,16 @@
+[
+   {
+      "name": "Saulo",
+      "cpf": "12345678910",
+      "birthday": "1986-10-22",
+      "balance": 0,
+      "extract": []
+   },
+   {
+      "name": "Sauron",
+      "cpf": "01987654321",
+      "birthday": "1986-10-22",
+      "balance": 0,
+      "extract": []
+   }
+]
