@@ -1,0 +1,16 @@
+O que são classes:
+R:
+   1- Commerce;
+   2- Residence;
+   3- Industry;
+   4- Place;
+
+O que é interface:
+R:
+   1- Clients;
+
+
+Classes pai e filhas:
+R:
+   Pai = Place;
+   Filhas = Commerce, Residence, Industry, residentialClient, industrialClient, commercialClient.
