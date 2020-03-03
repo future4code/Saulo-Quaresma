@@ -1,0 +1,63 @@
+USE exercicios;
+DESCRIBE actors;
+
+SELECT first_name, last_name
+FROM actors
+WHERE last_name LIKE '%a%';
+
+SELECT last_name
+FROM actors
+WHERE first_name = 'DAN' OR first_name = 'JULIA';
+
+SELECT first_name
+FROM actors
+WHERE first_name = 'ANGELINA' OR first_name LIKE '%b%';
+
+USE `bouman-saulo`;
+
+CREATE TABLE actors (
+actor_id int(5) PRIMARY KEY,
+first_name varchar(45),
+last_name varchar(45)
+);
+
+INSERT INTO actors (actor_id, first_name, last_name)
+VALUE (1, "Saulo", "Quaresma");
+
+USE exercicios;
+DESCRIBE films;
+
+SELECT title, description
+FROM films
+WHERE length >= 2;
+
+SELECT description, release_year, rating
+FROM films
+WHERE description like "%Documentary%";
+
+SELECT title, release_year, special_features
+FROM films
+WHERE rating = "NC-17" AND title like "a%";
+
+SELECT *
+FROM films
+WHERE special_features = "trailers" AND rating = "PG-13" AND title like "%d%";
+
+USE `bouman-saulo`;
+
+CREATE TABLE films (
+film_id int(10) PRIMARY KEY NOT NULL,
+title varchar(128) NOT NULL,
+description varchar(255),
+release_year year(4),
+length int(11),
+rating enum("G", "PG", "PG-13", "R", "NC-17") default "G",
+special_features set("Trailer", "Commentaries", "Deleted Scenes", "Behind the Scenes")
+);
+
+INSERT INTO films (film_id, title, description, release_year, length, rating, special_features)
+VALUE	(1, "movie1", "A awesome movie about a coach creating a great basketball team.", 2005, 2, "G", "Trailer"),
+	(2, "movie2", "A great movie about black woman in the 60's.", 2015, 2, "PG-13", "Commentaries"),
+        (3, "movie3", "A fantasy movie about a small hobbit with great responsabilites.", 2001, 3, "PG", "Deleted Scenes"),
+        (4, "movie4", "A amazing movie about a cyborg coming from the future.", 1985, 1, "PG-13", "Behind the Scenes"),
+        (5, "movie5", "A horror movie about a clown and some missing kids.", 2017, 2, "NC-17", "Trailer");
