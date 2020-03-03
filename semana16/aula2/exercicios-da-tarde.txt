@@ -1,0 +1,83 @@
+USE exercicios;
+DESCRIBE city;
+
+SELECT *
+FROM city
+ORDER BY population ASC
+LIMIT 5;
+
+SELECT avg(population) AS 'population average'
+FROM city;
+
+SELECT count(*), district
+FROM city
+GROUP BY district;
+
+SELECT count(*), countryCode
+FROM city
+GROUP BY countryCode
+ORDER BY count(*) DESC
+LIMIT 10;
+
+DESCRIBE country;
+
+SELECT name, population
+FROM country
+WHERE population > 100000
+ORDER BY 2 ASC
+LIMIT 100;
+
+SELECT count(*)
+FROM country
+WHERE population > 5000000;
+
+SELECT sum(population) AS "Soma de população"
+FROM country
+WHERE continent = "Asia";
+
+SELECT count(*), governmentForm
+FROM country
+WHERE governmentForm like "%Republic%" OR GovernmentForm like "%Monarchy%"
+GROUP BY governmentForm;
+
+SELECT count(*), max(governmentForm)
+FROM country
+ORDER BY governmentForm;
+
+SELECT avg(population), continent
+FROM country
+GROUP BY continent
+ORDER BY avg(population) ASC;
+
+SELECT *
+FROM country
+ORDER BY indepYear DESC
+LIMIT 10;
+
+SELECT avg(lifeExpectancy), lower(continent)
+FROM country
+GROUP BY continent;
+
+SELECT max(surfaceArea), continent
+FROM country
+GROUP BY continent
+ORDER BY max(surfaceArea) ASC
+LIMIT 3;
+
+USE `bouman-saulo`;
+DESCRIBE films;
+
+ALTER TABLE films
+ADD watched BOOL NOT NULL DEFAULT FALSE;
+
+UPDATE films
+SET watched = TRUE
+WHERE rating = "PG-13";
+
+ALTER TABLE films
+ADD lucky_number INT NOT NULL DEFAULT 0;
+
+UPDATE films
+SET lucky_number = floor(rand()*(1-1000+1)+1000);
+
+SELECT * FROM films;
