@@ -1,9 +1,10 @@
 import { BaseDB } from "./baseDatabase";
-import { UserGateway } from "../business/gateways/userGateway";
+import { UserGateway } from "../business/gateways/users/userGateway";
 import { User } from "../business/entities/users";
 
 export class UserDB extends BaseDB implements UserGateway {
    private usersTable = "users";
+   private friendshipTable = "friendships";
 
    private mapDBUserToUser(input?: any): User | undefined {
       return (
@@ -37,5 +38,24 @@ export class UserDB extends BaseDB implements UserGateway {
       }
 
       return this.mapDBUserToUser(user[0][0])
+   };
+
+   public async createFriendship(applyingUserId: string, requestedUserId: string): Promise<void> {
+      await this.connection.raw(`
+         INSERT INTO ${this.friendshipTable} (applyingUserId, requestedUserId)
+         VALUES ('${applyingUserId}', '${requestedUserId}')
+      `)
+   };
+
+   public async deleteFriendship(applyingUserId: string, requestedUserId: string): Promise<void> {
+      await this.connection.raw(`
+         DELETE FROM ${this.friendshipTable}
+         WHERE applyingUserId = '${applyingUserId}' AND requestedUserId = '${requestedUserId}'
+      `)
+
+      await this.connection.raw(`
+         DELETE FROM ${this.friendshipTable}
+         WHERE applyingUserId = '${requestedUserId}' AND requestedUserId = '${applyingUserId}'
+      `)
    };
 }

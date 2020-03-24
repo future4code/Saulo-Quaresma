@@ -1,8 +1,8 @@
-import { UserGateway } from "../gateways/userGateway";
+import { UserGateway } from "../../gateways/users/userGateway";
 import { v4 } from "uuid";
 import * as bcrypt from 'bcrypt';
 import * as jwt from 'jsonwebtoken';
-import { User } from "../entities/users";
+import { User } from "../../entities/users";
 
 export class SignUpUC {
    constructor(private db: UserGateway) { }
@@ -11,7 +11,7 @@ export class SignUpUC {
       try {
          const jwtSecretKey: string = process.env.SECRET || "";
          const userId = v4();
-         const hashPassword = await bcrypt.hash(input.password, 15);
+         const hashPassword = await bcrypt.hash(input.password, 10);
          const newUser = new User(userId, input.name, input.email, hashPassword);
          const jwtToken = jwt.sign({
             name: input.name, 
@@ -30,7 +30,7 @@ export class SignUpUC {
       } catch (err) {
          throw new Error(err.message)
       }
-   }
+   };
 }
 
 export interface SignUpUCInput {

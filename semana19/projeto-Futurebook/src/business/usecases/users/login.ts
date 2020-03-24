@@ -1,4 +1,4 @@
-import { UserGateway } from "../gateways/userGateway";
+import { UserGateway } from "../../gateways/users/userGateway";
 import * as bcrypt from 'bcrypt';
 import * as jwt from 'jsonwebtoken';
 
@@ -19,7 +19,7 @@ export class LoginUC {
          throw new Error("Incorrect password.")
       }
 
-      const jwtToken = jwt.sign({ email: user.getEmail(), password: user.getPassword() }, jwtSecretKey, {
+      const jwtToken = jwt.sign({ id: user.getId(), email: user.getEmail(), password: user.getPassword() }, jwtSecretKey, {
          expiresIn: "1h"
       })
 
