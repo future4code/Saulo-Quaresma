@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { FriendshipUC } from "../../business/usecases/users/resquestFriendship";
-import { UserDB } from "../../data/userDatabase";
+import { FriendshipUC } from "../../../business/usecases/users/resquestFriendship";
+import { UserDB } from "../../../data/userDatabase";
 import * as jwt from "jsonwebtoken";
 
 export const requestFriendshipEndpoint = async (req: Request, res: Response) => {

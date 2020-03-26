@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { UserDB } from "../../data/userDatabase";
+import { UserDB } from "../../../data/userDatabase";
 import * as jwt from "jsonwebtoken";
-import { DeleteFriendshipUC } from "../../business/usecases/users/deleteFriendship";
+import { DeleteFriendshipUC } from "../../../business/usecases/users/deleteFriendship";
 
 export const deleteFriendshipEndpoint = async (req: Request, res: Response) => {
    try {
