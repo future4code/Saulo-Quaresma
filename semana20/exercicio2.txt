@@ -1,0 +1,10 @@
+Dificuldades=
+
+- um pouco confuso na parte de settar o password do root user;
+- testar o database.
+- editar o arquivo texto de configuração (precisa sair do sql pra fazer a edição).
+
+Positivos=
+
+- criar o banco de dados em si foi fácil;
+- garantir as permissões para o meu usuário.

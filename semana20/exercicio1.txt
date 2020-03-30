@@ -1,0 +1,23 @@
+1- Preciso pegar um 
+
+2= O projeto escolhido foi o 4eddit, feito em grupo pelo React. Motivo é o que está funcionando.
+
+3= ssh -i ec2-criada-para-a-aula-f4.pem ubuntu@54.164.143.180. Para acessar a máquina no servidor da AWS.
+
+4=
+a) git clone https://github.com/future4code/4eddit-bouman-6.git. Para clonar o projeto na máquina.
+b) ls. Para ver tudo o que tem na máquina.
+c) cd 4eddit-bouman-6. Para entrar na pasta do projeto na máquina.
+d) cd 4eddit-boilerplate. Para entrar na sub-pasta do projeto em si na máquina AWS.
+e) npm install. Para instalar as dependências do projeto.
+f) npm audit fix. Para arrumar alguns problemas na instalação das dependências no projeto.
+
+5= Porta já aberta durante a aula. Ambas 3000 e 80.
+
+6= 
+g) npm run build. Para criar a pasta build no projeto.
+h) cd build. Para entrar na pasta build.
+i) sudo python -mSimpleHTTPServer 80. Para acessar o projeto sem colocar a porta.
+
+7= Não senti nenhuma grande diferença, apenas não ter feito a parte de abrir as portas por já estarem abertas.
+Nada muito diferente de começar um projeto em grupo.
