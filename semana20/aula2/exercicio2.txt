@@ -1,0 +1,24 @@
+exports.myFunc = async (event) => {
+    const response = {
+        statusCode: 200,
+        body: JSON.stringify({
+            message: `Olá mundo, sou uma mensagem da AWS`}
+        )
+    };
+    return response;
+};
+
+exports.myFunc = async (event) => {
+    const response = {
+        statusCode: 200,
+        body: JSON.stringify({
+            message: event.message}
+        )
+    };
+    return response;
+};
+
+body do evento JSON = 
+{
+  "message": "Olá mundo, sou uma mensagem da AWS"
+}
