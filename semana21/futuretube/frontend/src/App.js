@@ -1,10 +1,10 @@
 import React from 'react';
-import Login from './containers/Login/index';
+import HomePage from './containers/HomePage/index';
 
 function App() {
   return (
     <div className="App">
-      <Login/>   
+      <HomePage/>   
     </div>
   );
 }
