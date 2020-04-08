@@ -1,0 +1,49 @@
+const knex = require("knex");
+const { v4 } = require('uuid');
+
+const connection = knex({
+   client: "mysql",
+   connection: {
+      host: process.env.HOST,
+      port: 3306,
+      user: process.env.USER,
+      password: process.env.PASSWORD,
+      database: process.env.DATABASE
+   }
+})
+
+const id = v4();
+const personagensTable = "personagens"
+
+exports.handler = async event => {
+   const result = await connection.raw(`
+      INSERT INTO ${personagensTable} (id, nome, nome_desenho, imagem) VALUES 
+      ('${id}', '${event.nome}', '${event.nomeDesenho}', '${event.imagem}');
+   `)
+
+   if(!event.nome) {
+      return {
+         statusCode: 400,
+         body: JSON.stringify("Nome não encontrado.")
+      }
+   }
+   
+    if(!event.nomeDesenho) {
+      return {
+         statusCode: 400,
+         body: JSON.stringify("Nome do desenho não encontrado.")
+      }
+   }
+   
+    if(!event.imagem) {
+      return {
+         statusCode: 400,
+         body: JSON.stringify("Imagem não encontrada.")
+      }
+   }
+   
+   return {
+      statusCode: 200,
+      body: JSON.stringify(result[0][0])
+   }
+};
