@@ -1,0 +1,44 @@
+* {
+   margin: 0px;
+   padding: 0px;
+   font-family: "Roboto", Helvetica, sans-serif;
+}
+
+.main-container {
+   display: flex;
+   height: 100vh;
+   background: #212121;
+}
+
+input {
+   margin: 5%;
+   padding: 5%;
+   border-radius: 20px;
+   outline: none;
+}
+
+h3 {
+   color: white;
+   font-family: 12pt;
+   font-weight: bold;
+}
+
+.videos-container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   float: left;
+   height: 30vh;
+}
+
+.filter-container {
+   flex-direction: column;
+   max-width: 10%;   
+   padding: 5% 2% 5% 2%;
+   border-right: 1px dotted #fff;
+}
+
+.video-card {
+   padding: 2px;
+   margin: 25px 5px 10px 50px;
+}
