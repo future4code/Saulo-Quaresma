@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { SignUpUC } from "../../../business/usecases/signUp";
+import { SignUpUC } from "../../../business/usecases/users/signUp";
 import { UserDB } from "../../../data/userDatabase";
 
 export const signUpEndpoint = async (req: Request, res: Response) => {

@@ -1,27 +1,33 @@
-import { UserGateway } from "../gateways/user/userGateway";
+import { UserGateway } from "../../gateways/user/userGateway";
 import * as bcrypt from 'bcrypt';
 import * as jwt from 'jsonwebtoken';
 
 export class LoginUC {
-   constructor(private db: UserGateway) {}
+   constructor(private db: UserGateway) { }
 
    async execute(input: LoginUCInput): Promise<LoginUCOutput> {
       const user = await this.db.getUserByEmail(input.email);
       const jwtSecretKey: string = process.env.JWT_SECRET || "";
 
-      if(!user) {
+      if (!user) {
          throw new Error("Incorrect email!");
       }
 
       const passwordVerify = await bcrypt.compare(input.password, user.getPassword());
 
-      if(!passwordVerify) {
+      if (!passwordVerify) {
          throw new Error("incorrect password!");
       }
 
-      const jwtToken = jwt.sign({id: user.getId(), email: user.getEmail(), password: user.getPassword()}, jwtSecretKey, {
+      const jwtToken = jwt.sign({
+         id: user.getId(),
+         email: user.getEmail(),
+         password: user.getPassword()
+      },
+         jwtSecretKey, {
          expiresIn: "1h"
-      } )
+      }
+      )
 
       return {
          message: "User logged sucessfully!",

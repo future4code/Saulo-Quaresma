@@ -1,5 +1,5 @@
-import { UserGateway } from "../gateways/user/userGateway";
-import { User } from "../entities/users";
+import { UserGateway } from "../../gateways/user/userGateway";
+import { User } from "../../entities/users";
 import * as jwt from 'jsonwebtoken';
 import * as bcrypt from 'bcrypt';
 import { v4 } from 'uuid';
@@ -13,6 +13,7 @@ export class SignUpUC {
       const hashPassword = await bcrypt.hash(input.password, 10);
       const newUser = new User(id, input.name, input.email, input.birthDay, input.picture, hashPassword);
       const jwtToken = jwt.sign({
+         id,
          name: input.name,
          email: input.email,
          password: input.password

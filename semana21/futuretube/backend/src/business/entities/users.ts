@@ -5,7 +5,7 @@ export class User {
       private email: string,
       private birthDay: Date,
       private picture: string,
-      private password: string
+      private password: string,
    ) { }
 
    public getId(): string {
