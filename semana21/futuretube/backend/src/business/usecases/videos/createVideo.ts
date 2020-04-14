@@ -8,7 +8,7 @@ export class CreateVideoUC {
    public async execute(input: CreateVideoUCInput): Promise<CreateVideoUCOutput> {
       const id = v4();
 
-      const verifyVideoExist = await this.videoDB.verifyVideoPosted(input.url);
+      const verifyVideoExist = await this.videoDB.verifyVideoByUrl(input.url);
 
       if (verifyVideoExist) {
          throw new Error("Cannot post the same video url.")
@@ -19,7 +19,6 @@ export class CreateVideoUC {
          input.title,
          input.description,
          input.url,
-         new Date().toLocaleString(),
          input.userId
       );
 

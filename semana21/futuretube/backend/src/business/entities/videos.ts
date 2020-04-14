@@ -4,7 +4,6 @@ export class Video {
       private title: string,
       private description: string,
       private url: string,
-      private creationDate: string,
       private userId: string
    ) { }
 
@@ -38,14 +37,6 @@ export class Video {
 
    public setUrl(url: string): void {
       this.url = url;
-   }
-
-   public getCreationDate(): string {
-      return this.creationDate;
-   }
-
-   public setCreationDate(creationDate: string): void {
-      this.creationDate = creationDate;
    }
 
    public getUserId(): string {
