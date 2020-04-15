@@ -11,7 +11,7 @@ export class SignUpUC {
       const id = v4();
       const jwtSecretKey: string = process.env.JWT_SECRET || "";
       const hashPassword = await bcrypt.hash(input.password, 10);
-      const newUser = new User(id, input.name, input.email, input.birthDay, input.picture, hashPassword);
+      const newUser = new User(id, input.name, input.email, input.birthDate, input.picture, hashPassword);
       const jwtToken = jwt.sign({
          id,
          name: input.name,
@@ -22,7 +22,7 @@ export class SignUpUC {
          expiresIn: "1h"
       });
 
-      await this.db.createUser(newUser);
+      await this.db.signUp(newUser);
 
       return {
          message: "User created sucessfully!",
@@ -34,7 +34,7 @@ export class SignUpUC {
 interface SignUpUCInput {
    name: string,
    email: string,
-   birthDay: Date,
+   birthDate: string,
    picture: string,
    password: string
 }

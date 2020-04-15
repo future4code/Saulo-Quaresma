@@ -1,5 +1,5 @@
-import * as jwt from "jsonwebtoken";
 import { AuthenticationGateway, UsersInfoForToken } from "../business/gateways/AuthGateway";
+import * as jwt from "jsonwebtoken";
 
 export class JwtAuthorizer implements AuthenticationGateway {
    private expiresIn = "10h";

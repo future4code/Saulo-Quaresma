@@ -3,7 +3,7 @@ export class User {
       private id: string,
       private name: string,
       private email: string,
-      private birthDay: Date,
+      private birthDate: string,
       private picture: string,
       private password: string,
    ) { }
@@ -32,12 +32,12 @@ export class User {
       this.id = email;
    }
 
-   public getBirthDay(): Date {
-      return this.birthDay;
+   public getBirthDate(): string {
+      return this.birthDate;
    }
 
-   public setBirthDay(birthday: Date): void {
-      this.birthDay = birthday;
+   public setBirthDate(birthDate: string): void {
+      this.birthDate = birthDate;
    }
 
    public getPicture(): string {

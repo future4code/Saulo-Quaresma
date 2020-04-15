@@ -1,47 +1,45 @@
+import { CryptographyGateway } from "../../gateways/cryptographyGateway";
 import { UserGateway } from "../../gateways/user/userGateway";
-import * as bcrypt from 'bcrypt';
-import * as jwt from 'jsonwebtoken';
+import { AuthenticationGateway } from "../../gateways/AuthGateway";
 
 export class LoginUC {
-   constructor(private db: UserGateway) { }
+   constructor(
+      private db: UserGateway,
+      private authenticationGateway: AuthenticationGateway,
+      private cryptographyGateway: CryptographyGateway
+   ) { }
 
-   async execute(input: LoginUCInput): Promise<LoginUCOutput> {
+   public async execute(input: LoginUserUCInput): Promise<LoginUserUCOutput> {
       const user = await this.db.getUserByEmail(input.email);
-      const jwtSecretKey: string = process.env.JWT_SECRET || "";
 
       if (!user) {
-         throw new Error("Incorrect email!");
+         throw new Error("User not found");
       }
 
-      const passwordVerify = await bcrypt.compare(input.password, user.getPassword());
+      const verifyPassword = await this.cryptographyGateway.compare(
+         input.password,
+         user.getPassword()
+      );
 
-      if (!passwordVerify) {
-         throw new Error("incorrect password!");
+      if (!verifyPassword) {
+         throw new Error("Wrong Password or Email");
       }
 
-      const jwtToken = jwt.sign({
+      const token = this.authenticationGateway.generateToken({
          id: user.getId(),
-         email: user.getEmail(),
-         password: user.getPassword()
-      },
-         jwtSecretKey, {
-         expiresIn: "1h"
-      }
-      )
+      });
 
       return {
-         message: "User logged sucessfully!",
-         token: jwtToken
-      }
-   };
+         token,
+      };
+   }
 }
 
-interface LoginUCInput {
-   email: string,
-   password: string
+interface LoginUserUCInput {
+   email: string;
+   password: string;
 }
 
-interface LoginUCOutput {
-   message: string,
-   token: string
+interface LoginUserUCOutput {
+   token: string;
 }

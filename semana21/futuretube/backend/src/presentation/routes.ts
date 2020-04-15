@@ -7,14 +7,16 @@ import { getUserVideosEndPoint } from "./endpoints/video/getUserVideos";
 import { changeVideoInfosEndPoint } from "./endpoints/video/changeVideoInfos";
 import { deleteVideoEndPoint } from "./endpoints/video/deleteVideo";
 import { getAllVideoInfosEndpoint } from "./endpoints/video/getAllVideoInfos";
+import { changePasswordEndpoint } from "./endpoints/user/changePassword";
 
 const app = express();
 app.use(express.json());
 
 app.post('/signup', signUpEndpoint)
 app.post('/login', loginEndpoint)
+app.post('/user/changePassword', changePasswordEndpoint)
 
-app.post('/createvideo', createVideoEndpoint)
+app.post('/create/video', createVideoEndpoint)
 app.get('/videos', getAllVideosEndPoint)
 app.get('/user/videos/', getUserVideosEndPoint)
 app.post('/video/changeInfos', changeVideoInfosEndPoint)

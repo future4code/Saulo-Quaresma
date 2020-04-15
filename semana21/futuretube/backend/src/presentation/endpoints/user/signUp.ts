@@ -8,7 +8,7 @@ export const signUpEndpoint = async (req: Request, res: Response) => {
       const result = await createUserUC.execute({
          name: req.body.name,
          email: req.body.email,
-         birthDay: req.body.birthDay,
+         birthDate: req.body.birthDate,
          picture: req.body.picture,
          password: req.body.password
       })
