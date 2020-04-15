@@ -8,13 +8,19 @@ body {
    padding: 0;
 }
 
-.footer {
-   background-image: linear-gradient(to right, #ffd149, #ffa000, #c67100, #212121);
+.footer-container {
+   background-image: linear-gradient(to right, #03DAC5, #6200EE, #3700B3, #212121);
    position: fixed;
    bottom: 0px;
    width: 100%;
-   height: 5%;
+   height: 6%;
    color: white;
    font-size: 14pt;
-   border-top: 20px solid #212121;
+   justify-items: center;
+   border-top: 1px solid #fff;
+}
+
+.footer > p {
+   padding: 15px 0;
+   text-align: center;
 }

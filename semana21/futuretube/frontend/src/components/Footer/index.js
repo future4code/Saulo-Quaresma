@@ -5,13 +5,11 @@ class Footer extends Component {
    render() {
       return (
          <main className="main">
-            <footer className="footer">
-               <div className="socials-container">
-                  Footer
-                
+            <footer className="footer-container">
+               <div className="footer">
+                  <p>Made by Saulo @ 2020</p>
                </div>
             </footer>
-
          </main>
       )
    };
