@@ -11,7 +11,7 @@ export class ExpressMiddleware {
     private _app: Application,
     private _req: MiddlewareRequest,
     private _res: MiddlewareResponse
-  ) {}
+  ) { }
   get app(): Application {
     return this._app;
   }

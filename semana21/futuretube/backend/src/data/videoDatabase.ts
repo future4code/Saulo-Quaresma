@@ -48,11 +48,11 @@ export class VideoDB extends BaseDatabase implements VideoGateway {
 
    public async getAllVideos(limit: number, offset: number): Promise<VideoFeed[]> {
       const response = await this.connection.raw(`
-        SELECT ${this.videosTableName}.*, ${this.usersTableName}.*
-        FROM ${this.videosTableName}
-        JOIN ${this.usersTableName}
-        ON ${this.videosTableName}.userId = ${this.usersTableName}.id
-        LIMIT ${limit} OFFSET ${offset};
+         SELECT ${this.videosTableName}.*, ${this.usersTableName}.*
+         FROM ${this.videosTableName}
+         JOIN ${this.usersTableName}
+         ON ${this.videosTableName}.userId = ${this.usersTableName}.id
+         LIMIT ${limit} OFFSET ${offset};
       `)
 
       return response[0].map((video: any) => {
@@ -96,23 +96,23 @@ export class VideoDB extends BaseDatabase implements VideoGateway {
 
    public async deleteVideo(id: string): Promise<void> {
       await this.connection.raw(`
-        DELETE FROM ${this.videosTableName}
-        WHERE id = '${id}'
+         DELETE FROM ${this.videosTableName}
+         WHERE id = '${id}'
       `)
    };
 
    public async changeVideosInfos(id: string, newDescription: string, newTitle: string): Promise<void> {
       await this.connection.raw(`
-        UPDATE ${this.videosTableName}
-        SET description = '${newDescription}', title = '${newTitle}'
-        WHERE id = '${id}';
+         UPDATE ${this.videosTableName}
+         SET description = '${newDescription}', title = '${newTitle}'
+         WHERE id = '${id}';
       `)
    };
 
    public async getVideoById(id: string): Promise<Video | undefined> {
       const result = await this.connection.raw(`
-        SELECT * FROM ${this.videosTableName}
-        WHERE id = '${id}'
+         SELECT * FROM ${this.videosTableName}
+         WHERE id = '${id}'
       `)
 
       if (!result[0][0]) {
@@ -130,11 +130,11 @@ export class VideoDB extends BaseDatabase implements VideoGateway {
 
    public async getAllVideoInfos(id: string): Promise<VideoFeed> {
       const result = await this.connection.raw(`
-      SELECT ${this.videosTableName}.*, ${this.usersTableName}.name, ${this.usersTableName}.picture 
-      FROM ${this.videosTableName}
-      JOIN ${this.usersTableName}
-      ON ${this.videosTableName}.userId = ${this.usersTableName}.id
-      WHERE id = '${id}'
+         SELECT ${this.videosTableName}.*, ${this.usersTableName}.name, ${this.usersTableName}.picture 
+         FROM ${this.videosTableName}
+         JOIN ${this.usersTableName}
+         ON ${this.videosTableName}.userId = ${this.usersTableName}.id
+         WHERE id = '${id}'
       `)
 
       return new VideoFeed(

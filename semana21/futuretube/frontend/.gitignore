@@ -13,8 +13,9 @@
 
 # misc
 .vscode
-.DS_Store
+.idea
 .env
+.DS_Store
 .env.local
 .env.development.local
 .env.test.local

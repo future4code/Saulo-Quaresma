@@ -1,33 +1,49 @@
+import { v4 } from "uuid";
+import { CryptographyGateway } from "../../gateways/cryptographyGateway";
 import { UserGateway } from "../../gateways/user/userGateway";
+import { AuthenticationGateway } from "../../gateways/AuthGateway";
 import { User } from "../../entities/users";
-import * as jwt from 'jsonwebtoken';
-import * as bcrypt from 'bcrypt';
-import { v4 } from 'uuid';
 
 export class SignUpUC {
-   constructor(private db: UserGateway) { }
+   constructor(
+      private db: UserGateway,
+      private authenticationGateway: AuthenticationGateway,
+      private cryptographyGateway: CryptographyGateway
+   ) { }
 
-   async execute(input: SignUpUCInput): Promise<SignUpUCOutput> {
+   public async execute(input: SignUpUCInput): Promise<SignUpUCOutput> {
       const id = v4();
-      const jwtSecretKey: string = process.env.JWT_SECRET || "";
-      const hashPassword = await bcrypt.hash(input.password, 10);
-      const newUser = new User(id, input.name, input.email, input.birthDate, input.picture, hashPassword);
-      const jwtToken = jwt.sign({
-         id,
-         name: input.name,
-         email: input.email,
-         password: input.password
-      },
-         jwtSecretKey, {
-         expiresIn: "1h"
+
+      if (!input.name || input.name.length < 1) {
+         throw new Error("Input name is missing!");
+      }
+      if (!input.email || input.email.length < 1) {
+         throw new Error("Input email is missing!");
+      }
+      if (!input.birthDate || input.birthDate.length < 1) {
+         throw new Error("Input birthDate is missing!");
+      }
+      if (!input.picture || input.picture.length < 1) {
+         throw new Error("Input picture is missing!");
+      }
+
+      const pass = await this.cryptographyGateway.encrypt(input.password);
+      const invalidPassword = pass.length < 6;
+
+      if (!pass || invalidPassword) {
+         throw new Error("Password does not exist or is not valid");
+      }
+
+      const user = new User(id, input.name, input.email, input.birthDate, input.picture, pass);
+      await this.db.signUp(user);
+
+      const token = this.authenticationGateway.generateToken({
+         id: user.getId(),
       });
 
-      await this.db.signUp(newUser);
-
       return {
-         message: "User created sucessfully!",
-         token: jwtToken
-      }
+         token,
+      };
    }
 }
 
@@ -40,6 +56,5 @@ interface SignUpUCInput {
 }
 
 interface SignUpUCOutput {
-   message: string,
    token: string
 }
