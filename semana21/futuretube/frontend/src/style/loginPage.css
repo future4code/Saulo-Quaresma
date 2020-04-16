@@ -1,0 +1,10 @@
+* {
+   margin: 0px;
+   padding: 0px;
+   font-family: "Roboto", Helvetica, sans-serif;
+}
+
+.main-container {
+   background: #212121;
+   border: 10px solid black;
+}

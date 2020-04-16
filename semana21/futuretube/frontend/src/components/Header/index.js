@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Logo from '../../logo.png';
-import '../../style/Header.css';
+import "../../style/header.css";
 
 class Header extends Component {
    render() {
@@ -13,7 +13,7 @@ class Header extends Component {
             </header>
             <div className="buttons-container">
                <button className="button">Home</button>
-               <button className="button">Galery</button>
+               <button className="button">Gallery</button>
                <button className="button">Search</button>
                <button className="button">Logout</button>
             </div>

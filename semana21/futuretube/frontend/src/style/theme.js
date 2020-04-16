@@ -1,12 +1,12 @@
 import { createMuiTheme } from "@material-ui/core";
 
 export default createMuiTheme({
-  palette: {
-    primary: {
-      light: "#ffd149",
-      main: "#ffa000",
-      dark: "#c67100",
-      constrastText: "#0000",
-    }
-  }
+   palette: {
+      primary: {
+         light: "#03DAC5",
+         main: "#3700B3",
+         dark: "#212121",
+         constrastText: "#FFFF",
+      }
+   }
 });
