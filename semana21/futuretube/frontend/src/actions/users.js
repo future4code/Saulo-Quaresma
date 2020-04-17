@@ -2,7 +2,8 @@ import axios from 'axios'
 import { push } from "connected-react-router";
 import { routes } from "../containers/Router/index";
 
-const baseURL = "https://aj29jgfh2g.execute-api.us-east-1.amazonaws.com/V1";
+//const baseURL = "https://aj29jgfh2g.execute-api.us-east-1.amazonaws.com/V1";
+const baseURL = "http://localhost:3000";
 
 export const login = (email, password) => async (dispatch) => {
    const loginInformation = {
@@ -13,10 +14,10 @@ export const login = (email, password) => async (dispatch) => {
    try {
       const response = await axios.post(`${baseURL}/login`, loginInformation);
       window.localStorage.setItem("token", response.data.token);
-      dispatch(push(routes.feedPage));
+      dispatch(push(routes.homePage));
    } catch {
       window.alert("Login Error.");
-      dispatch(push(routes.loginPage))
+      dispatch(push(routes.root))
    };
 };
 

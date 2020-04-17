@@ -9,6 +9,13 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
 class HomePage extends Component {
+   constructor(props) {
+      super(props);
+      this.state = {
+         form: {},
+      };
+   }
+
    render() {
       return (
          <main>
@@ -30,7 +37,7 @@ class HomePage extends Component {
                            </Typography>
                            <Typography variant="body2" color="textSecondary" component="p">
                               Exemplo de card com vídeos.
-                        </Typography>
+                           </Typography>
                         </CardContent>
                      </CardActionArea>
                   </Card>

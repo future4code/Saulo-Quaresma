@@ -3,11 +3,6 @@
    padding: 0px;
 }
 
-body {
-   margin: 0;
-   padding: 0;
-}
-
 .footer-container {
    background-image: linear-gradient(to right, #03DAC5, #6200EE, #3700B3, #212121);
    position: fixed;

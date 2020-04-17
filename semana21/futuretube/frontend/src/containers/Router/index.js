@@ -3,10 +3,11 @@ import { ConnectedRouter } from "connected-react-router";
 import { Switch, Route } from "react-router-dom";
 import LoginPage from "../LoginPage";
 import HomePage from "../HomePage";
+//import SignUpPage from "../SignUpPage";
 
 export const routes = {
-   root: "/",
-   homePage: "/home"
+   root: "/login",
+   homePage: "/home",
 };
 
 function Router(props) {
